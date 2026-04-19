@@ -22,6 +22,8 @@ renders/
 *.mov
 *.webm
 *.mkv
+*.wmv
+*.avi
 *.gif
 *.webp
 
