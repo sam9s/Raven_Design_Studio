@@ -1,0 +1,273 @@
+Chapter 1: Demo
+0:00Today I'm going to show you guys how Claude can be a complete game changer for editing videos. Whether that's text on screen like up here or whether that's subtitles down at the bottom like right
+0:088 secondshere or it could be motion graphics or charts and different elements. It can be pretty much anything you want it to be.
+0:1212 secondsI can move my face around if I want. I can do anything by just using my natural language. You don't have to know how to code at all. And I'm going to show you guys a ton of other examples. So let's
+0:2121 secondsnot waste any time and let's just get straight into the video. So yeah, pretty wild. By the end of this video, you'll know exactly how to do all of this that I just did using Claude. And it's so
+0:2929 secondsmuch easier than you may think. And I'm going to give you guys a repo and a skill and all the stuff that you need to get set up exactly like I've been set up here for completely free. So stay tuned
+0:3737 secondsand I'll show you how. So Claude is now a video editing team and this has already been saving me so much time.
+0:4343 secondsIt's actually crazy. Now one thing I want to put into perspective real quick is if you've never edited videos yourself, if you've never like used key
+0:5151 secondsframes and animated motion graphics and things like that, you may not realize how long this 23 second clip would have taken you to edit manually. But if I
+0:5858 secondswanted to edit this by hand, it would have probably taken me like 2 hours. And you know, I'm not a crazy good video editor, so maybe some of the best could
+1:051 minute, 5 secondsdo this in 30, 45 an hour. But the people on my team who actually know how to edit videos really well, said that this is a complete game changer. So,
+1:131 minute, 13 secondswe're going to talk about two different methods. The first one is using Claw Design. Yeah, Claude Design, the web app that we showed off yesterday. If you didn't see that video, I'll tag it right
+1:201 minute, 20 secondsup here. But inside of Claw Design, not only can you make websites and slide decks, but you can actually animate things. I'll show you guys some examples. We'll go through a live build
+1:281 minute, 28 secondstogether. It's really cool. And then we're going to talk about how to do it with hyperframes, which is kind of like a better version of Remotion. If you guys have seen that, it's a little bit more setup, but it's way more powerful.
+1:371 minute, 37 secondsSo, I'm going to walk you guys through both of those. So, real quick before we do that, let's just start with a taste.
+Chapter 2: Claude Design Examples
+1:421 minute, 42 secondsLet me show you guys a few different examples of what's happened here. So,
+1:461 minute, 46 secondsobviously you guys already saw that Clawude Edit intro, but let's look at one that I made called the Hyperframe Sizzle, which just basically shows off the power of what hyperframes could really do. All right, here we go.
+1:561 minute, 56 secondsSo, we got this cool little terminal thing that installs Hyperframes.
+1:591 minute, 59 secondsHyperframes times cloud code. Write HTML render video built for agents.
+2:072 minutes, 7 secondsHours to ship a 90-cond video. Premiere Pro Final Cut but hyperframes is a fraction of the time.
+2:142 minutes, 14 secondsWe got these cool little phones pop up and you can see it's like the process of like rendering a video. Prompt, preview, render.
+2:212 minutes, 21 secondsThe audio is reactive, which is pretty cool. Another little terminal style animation.
+2:292 minutes, 29 secondsWe're launching different color schemes.
+2:302 minutes, 30 secondsThis is from Enthropic. It pulls in their font. We can see Claude 4.7 Opus.
+2:352 minutes, 35 secondsWe can see a swirl type of animation which we can install from Hyperframes.
+2:392 minutes, 39 secondsWe could also do this chromatic radial split.
+2:432 minutes, 43 secondsWe've got these other cool little overlays that could pop up. And you can use so many of these elements out of the box. They've got cataloges. They've got things like that. You can sync your
+2:512 minutes, 51 secondsvoice to the actual words like karaoke style subtitles.
+2:562 minutes, 56 secondsIt goes from HTML to your browser to ffmpeg to MP4 and it is just really really impressive. So, so this is supposed to be my logo. Not exactly sure
+3:053 minutes, 5 secondswhat happened. Oh, that's weird. For some reason, the draft had my logo, but the final version didn't. So, I would have to tweak that, but basically that's what happened there. And all of this,
+3:123 minutes, 12 secondsthis entire video was animated and edited and created by Hyperframes and Claude Code. Okay, now let me show you one called the first agent promo. And we actually made this one in claw design.
+3:223 minutes, 22 secondsSo in here you can see that I basically the other day I made this thing called the first agent promo. So it basically made me a website. And so what I did
+3:293 minutes, 29 secondswith this is I converted this up here. I exported this to a standalone HTML as you can see right here. I downloaded that standalone HTML. And then I went
+3:373 minutes, 37 secondsback into a new project right here, the first agent release video. And you can see what I did is I dropped in that standalone HTML. And now we get this.
+3:483 minutes, 48 secondsSo, AI Automation Society, what if you could build an AI agent this weekend?
+3:513 minutes, 51 secondsAll the branding is consistent. Your first AI agent. You can see that there's like a scrolling banner at the bottom.
+3:563 minutes, 56 secondsWe've got these animations coming in really nice. And just once again, all I did was dropped in the HTML of our website and then said, "Turn this into
+4:044 minutes, 4 secondsan animated release video." Um, I I mean, I thought all of these animations are awesome. I really like this one with the terminal style stuff. I think that's really cool. And then it pops up at the end with, you know, May 4th through 6,
+4:154 minutes, 15 secondsjust $20, 500 seats. Claim your seat,
+4:184 minutes, 18 secondsjoin for 20 bucks. It all is just like super branded to the same way that the actual site is. And once again in here,
+4:244 minutes, 24 secondsmy prompt was create me an animation for the first air agent promotion. I dropped in the standalone HTML for this launch. There should be motion graphics,
+4:304 minutes, 30 secondsanimations, and visual elements that explain what's going on. It should feel fast-paced and engaging. That's it. And then it created me this. Once again,
+4:374 minutes, 37 secondsthis 30-ish second clip would have taken multiple hours to edit by hand. Okay, so method one is using claw design. How do we actually make a video? How do we make
+Chapter 3: Method 1: Claude Design
+4:464 minutes, 46 secondsit feel branded? and where are the limitations of claw design. So you guys pretty much just saw all that, right? Um I came in here and I have my AI automation society design system. So now
+4:554 minutes, 55 secondsit understands my logos, my branding, my colors, my typography, and that's how it made all of this stuff for me feel like the real website, which real quick, just
+5:035 minutes, 3 secondsto show you guys, it looks like this. So this is basically exactly what you saw in um those other two things, the promo video and the website. It has the same
+5:115 minutes, 11 secondsbuttons. It has the same font. It has the same colors. And now every video I make or every whatever I make in claw design will also look like that. So let's say we want to make a new video.
+5:215 minutes, 21 secondsIf I go here to from template and I click on animation, now we can actually make a timeline based motion design. So I'm going to call this one um May short
+5:305 minutes, 30 secondsdemo. And we're going to create from template. So, what I want to do here is instead of just animating, you know,
+5:365 minutes, 36 secondsmotion graphics, I wanted to take a video of mine and somehow animate that with things on top of it. So, I'm going to drop in a video file real quick.
+5:445 minutes, 44 secondsOkay. So, I just attached this file um right here. You can see May short 6. So, it's like a 18second clip or something.
+5:515 minutes, 51 secondsAnd I wanted to animate it. So, I'm going to say, "Hey, I just gave you a video, an MP4 called May Short 6, and what I want you to do is create a
+5:595 minutes, 59 secondslandscape video. Um, I want you to animate this so that people can watch the video and they will will be text and
+6:066 minutes, 6 secondsmotion graphics and animations that sync up and go along with what I'm actually saying in the video. And it should be engaging and, you know, keep their
+6:146 minutes, 14 secondsattention while visually illustrating the concepts. Okay, so that is my prompt. I'm going to shoot that off. And now Claude Design is basically going to start asking me some questions and it's going to start making this video. Now,
+6:246 minutes, 24 secondswhat you'll notice here is it can't actually read or listen to or understand what's being said in the video, which when you're animating a video, that's super important. And that's one of the
+6:336 minutes, 33 secondslimitations is you would have to basically feed in like the transcript of it so that it could actually understand what's being said and where. So, here it
+6:406 minutes, 40 secondssays paste in the video with the rough timestamps. And, you know, if you had to do that manually, it's a little bit of work. Luckily for us, in my cloud code
+6:486 minutes, 48 secondsproject, we've already done this. And by the way, if you're overwhelmed looking at this, don't be. I'm going to explain it later. But I would come down here to my May short 6 project and I already did
+6:576 minutes, 57 secondsbasically extract the script. So if I go to assets, you can see I have May short 6 JSON and this basically transcribed this whole video word for word with
+7:067 minutes, 6 secondstimestamp. So I'm just going to copy this, go back into cloud design, paste that in. So now it should be able to see the actual script. And then it asks me some other questions. So where does your
+7:147 minutes, 14 secondstalking head sit? It could be full width behind me with graphics overlay on top.
+7:187 minutes, 18 secondsIt could be me on the left, graphics on the right. Um, and I'm just basically going to say decide for me. Let's see what it can do. Visual energy level,
+7:257 minutes, 25 secondslet's go with punchy. What kind of motion graphics? We will do animated captions. We will do um diagrams, progress bars, screen. Yeah, all that.
+7:347 minutes, 34 secondsSure, we'll do full AIS dark theme. The end card CTA will be join the free community and we'll do landscape and shoot that off. So, what I like about
+7:417 minutes, 41 secondsClaw Design is it does a good job of asking you questions, but once again,
+7:447 minutes, 44 secondslike I said, the limitation is it can't actually read or listen to and transcribe the video. You would have to give it that timestamp stuff if you
+7:537 minutes, 53 secondswanted to actually sync the text and animations to what you're saying, which obviously is very important. And of course, so that it actually knows what motion graphics to create. Okay, so that
+8:018 minutes, 1 secondtook like 2 minutes. Let's see what we got. I've built over 500 AI workflows and most of them businesses don't need.
+8:078 minutes, 7 secondsThey don't need flashy automations or cool AI demos. They want simple things that save time or make money. That's it.
+8:138 minutes, 13 secondsThe workflows that actually work are boring stuff that replaces real work.
+8:168 minutes, 16 secondsThat's what businesses pay for. Comment 500W and I'll send you the full breakdown. Okay, that is crazy. I mean,
+8:248 minutes, 24 secondsthis is like super fast-paced. There's lots of animations. In some ways, this actually might be a bit better than what we would do later with hyperframes because like that is really impressive.
+8:358 minutes, 35 secondsYeah, I mean I I'm very impressed that it was able to do this. Anyways, what you would do now if you want to export this, it doesn't actually let you export this as a MP4. So, you would either just
+8:448 minutes, 44 secondsmake this full screen and you would just screen record it, which would be fine.
+8:478 minutes, 47 secondsOr if it's a longer video, you could actually do this. You could go here and hand off to Claude code and just copy this command. And then you could come into Claude and just literally give it
+8:568 minutes, 56 secondsthis and then say, "Hey, render this as an MP4." And it would actually be able to do it for you. And then you'd get the download, which is exactly what I did here with the first agent promo. The
+9:049 minutes, 4 secondsrender, you can see that we have the first agent promo. And that's exactly the same flow I did. I gave it that link and I said, "Hey, render this." Because when you think about what's actually
+9:119 minutes, 11 secondsgoing on with hyperframes, it's basically just creating HTML. And Cloud Design is really, really good at creating HTML. And apparently, it's
+9:209 minutes, 20 secondsreally good at animating that HTML as well. So, Cloud Design is a very, very viable option to actually edit these
+9:289 minutes, 28 secondsvideos. I'll show you guys another quick output I did earlier, which was this one. I did this one um vertically just because I wanted to see how it would
+9:369 minutes, 36 secondswork and see what it did. And obviously I didn't prompt it too much, right? Like I didn't give it a ton of information and I didn't tell it like, hey, when we're doing short form content, it needs
+9:439 minutes, 43 secondsto do this, this, and this. Um, but here's what we got. Let me just get rid of the tweaks. Let's see what we got here. I've built over 500 AI workflows and most of them businesses don't need.
+9:529 minutes, 52 secondsThey don't need flashy automations or cool AI demos. They want simple things that save time or make money. That's it.
+9:589 minutes, 58 secondsThe workflows that actually work are boring stuff that replaces real work.
+10:0210 minutes, 2 secondsThat's what businesses pay for. Comment $500. Okay, so the animations look good and stuff, right? But it's obviously just covering my face. So I'd want to say, "Hey, maybe you should put my face
+10:1010 minutes, 10 secondson just the bottom half and then put animations up top and things like that."
+10:1410 minutes, 14 secondsBut, you know, I didn't even give it any information here. This one, you can see actually timed out. So it filled in a bunch of information right here. It said that the questions timed out on the user, so it just went with the defaults.
+10:2410 minutes, 24 secondsSo maybe that's another reason why it's not as good. But this is really impressive. Okay, so that's cloud design. You guys will be able to get in there, play around with it, and I think it'll be able to take you pretty far.
+Chapter 4: Method 2: Hyperframes
+10:3310 minutes, 33 secondsBut if you want to go even farther and if you want more control, then you might want to look at using Hyperframes, which is what I'm going to be showing you guys now. So before we hop into Hyperframes,
+10:4110 minutes, 41 secondslet's real quick look at a few other examples that Hyperframes was able to create for me. So in this example, I basically said, hey, let's pretend that AI Automation Society is releasing a
+10:5010 minutes, 50 secondsmobile app. And I gave it the URL of AI Automation Society, and here's what we got.
+11:2011 minutes, 20 secondsI mean,
+11:2511 minutes, 25 secondsThat's pretty incredible. I love this slide. I love this scene. And the tweet is pretty cool. The follow is awesome.
+11:3211 minutes, 32 secondsAnd the reason it was able to do some of these things is because inside of Hyperframes, or not inside, but they have this documentation of, you know,
+11:3911 minutes, 39 secondslike how it works. And they also have some really cool catalog things. So, you could pull in this exact animation and just fill in your own things. A Mac OS notification, a Reddit postcard. We've
+11:4811 minutes, 48 secondsgot all of these different transitions as well. We've got the app showcase right here, which is what you saw um earlier in a different video. But it is just so cool. You can do a 3D UI reveal
+11:5611 minutes, 56 secondslike this. There's lots of elements that you can already pull out and use. Okay,
+12:0112 minutes, 1 secondlet me show you guys another example of one that is kind of a lesson 5.1. When and how to pitch an audit. At some point during a project,
+12:0812 minutes, 8 secondsyou're going to notice something. The client's business has more problems than the one you were hired to fix. You can see inefficiencies and workflows they haven't even asked about. You can tell
+12:1612 minutes, 16 secondsthe system needs more than a single automation. And you'll want to say something, but you won't be sure how.
+12:2212 minutes, 22 secondsBringing up a bigger engagement feels risky. You don't want to come across as the consultant who's always trying to expand the scope. So, you might just finish the project, send the invoice,
+12:3012 minutes, 30 secondsand move on. That hesitation costs you. Not because pitching audits is hard. Okay, so I'm going to pause it there.
+12:3612 minutes, 36 secondsYou guys can see the styling is a little bit different, right? And for an educational style video, I don't even know. I might want to use that or I might want to play around more with what
+12:4412 minutes, 44 secondswe saw back in hyperframes over here because like I said, I thought that this output was really, really cool. So, the important thing to understand here is there's so much customization. Like,
+12:5412 minutes, 54 secondsobviously, I tweaked this project so many times and I've rendered probably over 60 videos in the past day just playing around with different methods.
+13:0113 minutes, 1 secondAnd that's what's really important when you use a tool like Hyperframes or Claw Design is that you're putting in your own sort of like, you know, animation philosophy and your own design skills
+13:0913 minutes, 9 secondsand your own things to make the outputs the way you want them. Now, before we get set up, I wanted to show you two other things that I tried to play with that didn't really work too well. So,
+13:1713 minutes, 17 secondsthe first one was a ClickUp demo. I tried to make like a product SAS demo and I could have made this work a lot better if I did some things a little bit
+13:2513 minutes, 25 secondsmore manually, but I was really trying to push this tool to see what it could do with Cloud Code. So, basically what I did is I said, "Hey, go to clickup.com
+13:3213 minutes, 32 secondsand screen record and login as me and take screenshots and just create me a demo." And this is what it ended up making. It's not perfect, but if you
+13:4013 minutes, 40 secondsthink about the fact that I didn't record any of the screen thing and I just said I shot it off on a prompt and it came back, it's pretty cool. Now,
+13:4613 minutes, 46 secondsthis is also version five. So, I tried four different prompts and then I got to this one. Iterated each time. You can see it pulled the logo. It has this nice
+13:5413 minutes, 54 secondsanimation. The color scheme feels like ClickUp. We have sort of that 3D UI reveal. And this is where it loses me a little bit. It starts to just become a
+14:0114 minutes, 1 secondlittle bit static. Even though you can see it went into the app and it was able to take pictures, but now it's losing a bit of that taste and it's kind of
+14:0914 minutes, 9 secondslosing the energy that a human editor would have been able to put in. So, what I think is really awesome about this is people who already know how to edit and
+14:1714 minutes, 17 secondspeople who have a nice creative like intuition are going to be able to use these tools to 10x their productivity.
+14:2414 minutes, 24 secondsBecause if someone has no taste, there might they might get outputs like this.
+14:2814 minutes, 28 secondsBut if someone has really good understanding of what makes videos engaging and what, you know, scenes and transitions they should be looking at,
+14:3414 minutes, 34 secondsthey're going to be able to use these tools like crazy. So, anyways, that's what we got when I just gave it ClickUp's URL and said, "Make me a product demo." And then the other thing I wanted to show you guys is I was
+14:4314 minutes, 43 secondsplaying around with making shorts using cloud code and um hyperframes because it's a little bit more customizable. And this was my second version of this one.
+14:5214 minutes, 52 secondsI think earlier I made five or six shorts just testing it out. But you can see, you know, shorts are different. They have to capture your attention.
+14:5814 minutes, 58 secondsThey have to be engaging. And I just don't think that this is there yet. Like I wouldn't post this. But I do think that if I keep iterating, it can definitely get there eventually. So
+15:0615 minutes, 6 secondslet's give it a quick watch. Claude just killed chat GPT. not in hype, but in actual use. Better outputs, more reliable, less babysitting. If you're
+15:1515 minutes, 15 secondsbuilding with AI, you've probably already felt it. And if you haven't,
+15:1815 minutes, 18 secondsthen you need to switch before it's too late. Comment dead and I'll send the video explaining why. Okay, so what I like about this is there's always
+15:2615 minutes, 26 secondssomething new going on. The subtitles are there automatically. Sometimes it's me on the bottom half and stuff on the top half, and sometimes it zooms into just me. And then sometimes it goes to
+15:3415 minutes, 34 secondsjust all motion graphics. So, it definitely has this feeling like there's different vibes as you progress throughout the video, but like I said,
+Chapter 5: Setting Up Hyperframes
+15:4115 minutes, 41 secondsit's not there yet. I wouldn't post this, but it's getting better and it's really cool. So, how do we actually go ahead and set up hyperframes? Well, you
+15:4915 minutes, 49 secondshave to use cloud code for this. That's at least how I'm going to show you. And you can use this in VS Code, which is mainly what I'm going to show you guys.
+15:5515 minutes, 55 secondsYou can also use this in the cloud desktop app. So, like what I've got pulled up right here. And what's cool about this is Cloud Desktop app has a preview function. So you can pull up an
+16:0216 minutes, 2 secondsapp you're working on or a local host and you can preview your video right in here from the app as you're having a conversation which I do like but also I
+16:1016 minutes, 10 secondswould like this to be just like full screen and I don't know for me it's not too big of a deal to just switch over to my browser in order to see the local host and then just open VS Code back up.
+16:2016 minutes, 20 secondsSo that's really the main benefit of using the cloud desktop app. For me the main benefit of using VS Code is I can see all of my projects. I can see the
+16:2916 minutes, 29 secondsdifferent assets I've dropped in. I can move things around. I can look at all my different renders. I like to be able to see my files. And that's why I'm going to be using VS Code for this video.
+16:3716 minutes, 37 secondsAlso, this entire project right here is going to be a free GitHub repository that you guys can access, like I said,
+16:4216 minutes, 42 secondsfor free. Just join my free school community. The link for that is down in the description, and you'll be able to find all of my YouTube resources in there. And once you get that GitHub repo, literally just take the URL of it,
+16:5116 minutes, 51 secondssort of like I did with this, you know,
+16:5316 minutes, 53 secondsthe Hey Gen hyperframes one. You take the URL, you give it to Cloud Code, and you say, "Hey, can you please like analyze this or can you clone it and pull it in and then just help me set up
+17:0117 minutes, 1 secondmy own video editing studio right here in this project?" So, that leads me on to step one, which is you go to the official Hey Gen Hyperframes repo. If
+17:0917 minutes, 9 secondsyou scroll down, you can read about all of the different things in here. It's already got some built-in skills that you can use. Um, but then basically it shows you how this works and the quick
+17:1717 minutes, 17 secondsstart. So, you could just use this. You could just install it right here. But I think what's better is you copy the URL.
+17:2217 minutes, 22 secondsLike I said, you grab the URL of this GitHub repo, come into your cloud code,
+17:2617 minutes, 26 secondspaste it in, and then you just say something like this is an open- source video editing tool that I want to use,
+17:3217 minutes, 32 secondsanalyze the repo, you know, start to build some skills and start to build some knowledge around how it works, and then help me get it installed, and it
+17:3917 minutes, 39 secondswill just in a matter of minutes, you'll have it up and running, and then you just have to start iterating. And that's the thing about a tool like this is it really is all about iteration. So, here
+17:4817 minutes, 48 secondsis my project. Here is the actual like different ones I've worked on. You can see that I've iterated a ton. If I open up this one and I go to my renders,
+17:5517 minutes, 55 secondsthere's different versions, right? And there's so many different frames that I've tried. If I go to like the May Schwartz 19, we have tried so many different versions because what happens
+18:0318 minutes, 3 secondsis it gives you something and then you say, "Okay, here's what I like. Here's what I don't like. Go make changes." And then it renders it again. And then you say, "Okay, here's what I like. Here's what I don't like." And you have to do
+18:1218 minutes, 12 secondsthat over time. And as you do that, tell it build up a skill for this. Build up a skill for this. Build up a design doc for this. So, every single iteration,
+18:1918 minutes, 19 secondsevery single video you make makes your entire video editing studio in Cloud Code better. So, don't expect that you're going to be able to clone my repo, ask it to make a video, and it's
+18:2718 minutes, 27 secondsgoing to be perfect. You're going to have to put in a little bit of work, but you can iterate extremely fast. And I built a custom skill for this. So, I'm
+Chapter 6: Live Edit With Feedback
+18:3518 minutes, 35 secondsgoing to show that off in a second when we do this live edit here. So, let's go into VS Code and let's edit a video together. I'm going to go to my
+18:4318 minutes, 43 secondsdownloads real quick and drag in a video clip that we're going to edit. Okay, so I've got this video right here. here.
+18:4718 minutes, 47 secondsIt's going to be 37 seconds long and it's just me talking. I don't know why I can't see the preview right here, but this is now in our project. And what I'm going to do is I'm going to tell Claude
+18:5518 minutes, 55 secondsCode that we want to make a video using this video. So, in my Claude in my skills, you can see I've got some skills that you guys obviously will get access to all of them. And I have this one
+19:0319 minutes, 3 secondsright here called make a video. And we've got some references in here and we've got the skill. So, what I'm going to do is say, "Hey Claude Code, I need
+19:1119 minutes, 11 secondsyou to use the make a video skill and I need you to help me create a video for the golden ratio demo.mpp4." or that I've dropped into the root of this
+19:1919 minutes, 19 secondsproject. So that's the video. What I need you to do is help me figure out how to animate this. I'm also just going to shoot this off in plan mode and then we
+19:2619 minutes, 26 secondswill get going. You can see it's invoked the make a video skill and it's going to start by basically interviewing us a little bit and understanding the video
+19:3319 minutes, 33 secondsin order for it to understand what to build. Oh, and by the way, just for reference right now in my usage, I am 20% of the way through. So keep that in
+19:4219 minutes, 42 secondsmind, 20% of the way through. Let's see where we are after we have our finished video back right here. Now, what I want you to do is think about what it's actually doing here. So, right here, it
+19:5019 minutes, 50 secondstells us, okay, the video is landscape at 60 fps, 37 seconds, 2259 frames. Let me sample a few frames to see what this
+19:5819 minutes, 58 secondsvideo actually contains. So, it needs to analyze it a little bit. It says, "Got it. This video is just you at your desk in your AIS quarterzip with your mic. You're standing there just talking. So,
+20:0720 minutes, 7 secondsnow it understands what it's looking at." And you can see it starts to set up all of these different gates. So, the next thing we have to do is script and
+20:1420 minutes, 14 secondsvoice. So, it's going to ask us some questions. What is the golden ratio demo going to become um a face plus motion graphic overlays. So, that's kind of
+20:2120 minutes, 21 secondslike what we saw in the um claude edit intro, the video that I showed you guys earlier. Or do we want my face cam to be like on the bottom right corner and make
+20:2920 minutes, 29 secondsit be more of like a core style video. I want to do sort of one of these. So, we will click on this. You want to keep the full 37 seconds or trim it? I'm just going to keep the full 37 seconds.
+20:3820 minutes, 38 secondsShould I transcribe the demo so we get word level timestamps? Absolutely. So that's what's really key here is it needs to transcribe the video so that
+20:4620 minutes, 46 secondsnot only like I said can it create the right motion graphics, but it also needs to have them come into the scene at the right time. So you can either have it do
+20:5320 minutes, 53 secondsthis locally by installing like a Python whisper thing and it will actually go do it on your machine. But if that's taking up too much of your RAM, then what you can do is just use like an API to do so.
+21:0321 minutes, 3 secondsSo, if you give it an OpenAI API key, it can use OpenAI's whisper to go grab the transcript and the timestamps. And right on Q, you can see it says whisper.cpp
+21:1121 minutes, 11 secondsisn't installed. So, it's going to try alternatives, which will be the OpenAI API. I ended up uninstalling this because when I was running like eight different videos at the same time, it
+21:1921 minutes, 19 secondswas just killing my RAM. So, I just said, "Hey, just uninstall that." Now,
+21:2221 minutes, 22 secondsthe transcript is in and you can see that it starts to actually plan out what it's going to do for each kind of section of the video. So, hero visual
+21:3021 minutes, 30 secondsmetaphor. What carries the golden ratio idea visually across the whole piece?
+21:3421 minutes, 34 secondsYeah, we'll just go with this. I'm just going to take its recommendations. What about the captions? I don't actually want to do captions. We'll say no. Audio
+21:4121 minutes, 41 secondsonly and facecam treatment corner pip throughout. Full screen for intro and outro. Full screen with floating MG
+21:4921 minutes, 49 secondsoverlays. Yeah, I'm going to do this one. You guys may be confused about this whole golden ratio thing because I haven't shown you the raw footage yet,
+21:5521 minutes, 55 secondsbut just stick with me. You'll see at the end. It's going to keep chugging its way through all of these different gates. I'm going to check in with you guys if we get anything interesting or
+22:0222 minutes, 2 secondsonce it's done. Okay, so we got the plan ready for review. So, this is where you definitely want to spend some time making sure that you agree with what it's doing. So, it's basically going to tell me here for each of these sections,
+22:1222 minutes, 12 secondswhat is the motion graphics or animations that it's going to create? Because once you start creating them,
+22:1722 minutes, 17 secondsthat's where you're getting a lot of output tokens being used because it's writing a ton of HTML. So, if you accept the plan, but then you end up like not liking what it's doing, that will cost you more tokens. So, take some time,
+22:2622 minutes, 26 secondsread through the plan, and then go ahead and approve it. In this case, I'm just going to go ahead and approve it because I want to see how good it does by default without me helping steer it a
+22:3422 minutes, 34 secondston. And one other quick thing I wanted to mention while this is churning out its code is that if you wanted to take like a completely raw unedited video and
+22:4322 minutes, 43 secondsdrop it into here, you would probably want to manually edit out some of the mistakes and the retakes or some of the blank space or like dead space because it's not going to be great at
+22:5122 minutes, 51 secondsinterpreting when is the start of a new sentence and when did you mess up and what do you want to remove. So you could also try to use a tool like dcript but it's the same sort of logic and even
+23:0023 minutesdscript messes up a lot of times when I try to use it. So I will usually just take the script, I will cut out the mistakes because I know what's a mistake
+23:0723 minutes, 7 secondsand what's not and then I take that file and drop it into here. Now cloud code with something like f ofmpeg and hyperframes. It certainly could, but you
+23:1423 minutes, 14 secondswould just have to steer it. And at that point, if you're saying, hey, you know,
+23:1723 minutes, 17 secondscut from 4 seconds to 7 seconds and then cut from 15 seconds to 22 seconds. At that point, you doing that and then having it render all that would just take longer than if you just did it
+23:2523 minutes, 25 secondsyourself. So that's why I say that it's still capable. Just got to play around.
+23:3023 minutes, 30 secondsOkay, so it pulls up a preview and I do want to say that I've been having a lot of issues with these previews on local host. That's something that on Remotion I've basically never had an issue with,
+23:3823 minutes, 38 secondsbut for some reason Hyperframes, maybe because it's HTML based or whatever it is, it has a problem sometimes. So like right here, what's happened is it's
+23:4623 minutes, 46 secondsloaded in all of the different compositions, but at the bottom of the screen, you see it says 0 seconds out of 0 seconds. So there's nothing for me to actually look at. But here's the exact
+23:5323 minutes, 53 secondssame scenario with the intro video, and this one's working fine. So sometimes it's been working. It's been a little bit hit or miss. I can go back and forth to have it, you know, try to fix it. Or
+24:0224 minutes, 2 secondsif it's doing the same thing to you and you're just getting frustrated with it, then just say, "Hey, you know what?
+24:0524 minutes, 5 secondsInstead, just go ahead and give me the full render and then I'll give you feedback from there." The only time when that's really annoying is if the render is going to take a long time, if it's
+24:1224 minutes, 12 secondslike a 15-minute video, and then you render everything just to see that you need to make a few changes. Okay, so what's really cool is when I told it to go ahead and render it, what it does is
+24:2124 minutes, 21 secondsit does another final check and it looks at the frames and before I even gave any feedback, it made another fix. So, it made a V1 and then it came back and made a V2. It gave us another local host.
+24:3024 minutes, 30 secondsLet's see if we can see it this time.
+24:3124 minutes, 31 secondsCool. Okay, we actually can see it in a local host. So, let's give this a watch.
+24:3424 minutes, 34 secondsHey guys, my name is Nate. Today I wanted to talk to you about the golden ratio of AI automation which basically means when you think of automating a
+24:4324 minutes, 43 secondsprocess with AI. You think about the first 60% being automated with just deterministic logic the next 30% being automated with AI sort of AI assisted
+24:5224 minutes, 52 secondsand then that last 10% being kind of the human in the loop manual approval stage.
+24:5624 minutes, 56 secondsAnd the reason why I think this is important is because some people think that AI is magic and it can do it all.
+25:0125 minutes, 1 secondSome people think that AI is trash and it can't do anything because they've only been using Copilot. And really, it's actually somewhere in the middle.
+25:0825 minutes, 8 secondsSo, that's what I want to talk about in this video. Okay. So, pretty good.
+25:1325 minutes, 13 secondsThere's obviously some issues, but if you think about the fact that we hardly prompted it and it's, you know, it added this overlay on the the lefth hand side, so we can put text and we can see it.
+25:2225 minutes, 22 secondsThis was a big major issue. I think it put the blur on top of the text rather than behind. But, you know, there's a few things we needed to fix here with spacing and with, you know, the blur.
+25:3125 minutes, 31 secondsBut this is pretty cool. Like the the animations that it's making and the logic that it went through to make this the stuff is pretty cool. Now, also the
+25:3925 minutes, 39 secondsthe video in general is a little dark and um if I seem a little tired. I literally like had just woken up and I decided to film this. But let's actually talk about how do we give this thing
+25:4725 minutes, 47 secondsfeedback now. Okay. Okay, so real quick before we start giving feedback, I want to see how much context we're at, how many tokens this is eating up because this does eat up a decent amount. So
+25:5625 minutes, 56 secondsright now in the conversation, we are at 263K out of our million. So what I would do here is I would basically just go ahead and give this a clear. So in this case,
+26:0526 minutes, 5 secondswhat I like to do is say, okay, give me a summary of everything that you've built and you know where the different files are so I can clear the session
+26:1326 minutes, 13 secondsbecause I don't want to be making all of these changes on top of 263,000 tokens.
+26:1726 minutes, 17 secondsWe're going to reset and then I'm going to give it some more feedback. Okay, so here is the handoff message. I'm going to copy all of this. I'm going to clear
+26:2426 minutes, 24 secondsthis session and then I'm going to paste that in and then I'm just going to shoot that off and let it sort of like reorient itself and then we're going to go ahead and give feedback. And don't
+26:3326 minutes, 33 secondsover complicate the feedback. The way you're going to do this is the same exact way that you would give feedback to a human video editor. Basically
+26:4026 minutes, 40 secondssaying, hey, at this time stamp I don't like this and I like this and at this time stamp do this. So, let's just go ahead and start. Okay. So, the feedback
+26:4826 minutes, 48 secondsthat I need you to incorporate and fix some of these issues is as follows.
+26:5326 minutes, 53 secondsOverall, I like the vibe. I like the logic. I just need some aesthetic changes. So, first of all, at about 5
+27:0027 minutesseconds, four to 5 seconds, when the text starts to come in that I think it says the golden ratio, we can't actually see it because there's a blur effect on
+27:0827 minutes, 8 secondstop of it. And I think that blur effect needs to be behind it rather than on top because that whole text is blurred out.
+27:1427 minutes, 14 secondsBasically from like, you know, 4 seconds all the way till about 7 seconds. The next scene where you have the 60% come
+27:2227 minutes, 22 secondsin at about 12 seconds in. This looks really good. However, kind of the right half of the percentage sign gets blurred
+27:3027 minutes, 30 secondsand a little bit of the left part of the six is out of frame. So, if you can kind of just scale that down a little bit and make sure that none of that text is
+27:3927 minutes, 39 secondsblurred out. Very similar feedback for the next section with the 30%. This one all fits in frame, but the right half of the percentage sign is also blurred out.
+27:5027 minutes, 50 secondsAnd same thing for the 10%. The right half of the percentage sign is blurred out.
+27:5727 minutes, 57 secondsThe next scene looks solid. No feedback there. I think that's really good. And same thing with the final scene. So
+28:0528 minutes, 5 secondsthose are the changes that I have for you. Please go ahead and figure out how to make those and then give us a new video. And that's why it's so nice to be
+28:1328 minutes, 13 secondsable to just speak instead of having to type things out cuz you can just look at it and you can speak. So if you guys want to check out the tool that I use, just use the link in the description.
+28:2028 minutes, 20 secondsThe good news is it basically told us,
+28:2228 minutes, 22 seconds"Yep, everything you said is true. I see this. I need to make these changes." So,
+28:2628 minutes, 26 secondswhat you can do is in your prompting and the way that you set up your video editing flow is you can try to have it make sure that before it ever renders or before it ever gives you any any output
+28:3528 minutes, 35 secondsto review, you're telling it to look at every single frame first and then it can extract all of them, fix the changes,
+28:4028 minutes, 40 secondsand then come back with a better version. So, anyways, here's the plan.
+28:4328 minutes, 43 secondsIt's suggested changes to fix all of those things that we wanted. I'm going to go ahead and accept that and I'll let you know when we get our V2 or technically, I guess it would be our V3.
+28:5228 minutes, 52 secondsAll right, we've got a V3. Let's open this up and check it out. Hey guys, my name is Nate. Today I wanted to talk to you about the golden ratio of AI
+28:5928 minutes, 59 secondsautomation, which basically means when you think of automating a process with AI, you think about the first 60% being automated with just deterministic logic.
+29:0929 minutes, 9 secondsThe next 30% being automated with AI sort of approval is because some people Okay, so you can see that the fixes have been made a little bit. The 60% still
+29:1629 minutes, 16 secondscut off a bit, but the percentage signs look good. And of course, the big one is the hero title. This is still blurred out. So, I'm going to do another round
+29:2329 minutes, 23 secondsof revisions and we should be there. The hero title is still unreadable. It's still completely blurred out. I don't
+29:3129 minutes, 31 secondsknow what is going on here, but you need to make it visible just like the other text on this slide like lesson one and of a automation. Those are completely
+29:3829 minutes, 38 secondsvisible. So, you need to fix that. And then the percentage signs look better.
+29:4329 minutes, 43 secondsThe only issue still is that the 60% a little chunk of the six is still out of frame. So, if you can just scale this down or either just move it a little bit
+29:5129 minutes, 51 secondsmore to the right, that needs to be fixed a little bit, but the other ones look good. All right, V4 is here.
+29:5729 minutes, 57 secondsFingers crossed. Hey guys, my name is Nate. Today I wanted to talk to you about the golden ratio of AI automation
+30:0430 minutes, 4 secondswhich basically means when you think of automating a process with AI. You think about the first 60% being automated with just deterministic logic the next 30%
+30:1430 minutes, 14 secondsbeing automated with AI sort of AI assisted and then that last 10% being kind of the human in the loop manual approval stage. And the reason why I
+30:2130 minutes, 21 secondsthink this is important some people think we've only been using cop actually that's what I want to talk about in this video. There we go. We have our final version. I also think that this is pretty interesting, this kind of spiral.
+30:3130 minutes, 31 secondsI forget what this pattern is called, but we have basically the 10%, the 30%, and the 60% of the golden ratio. So,
+30:3730 minutes, 37 secondsthat's just showing you that Opus 4.7 cloud code, the logic that it's able to make and then using hyperframes and turning that into actual HTML that can
+Chapter 7: Cost and Speed
+30:4530 minutes, 45 secondsbe animated is very cool. So, the final thing I wanted to talk about was just kind of the cost and speed stuff. So,
+30:5030 minutes, 50 secondslet's come back into here and let's do another quick/context to see how many we took on that second run. So, the first one was what, like 260K. This one is
+30:5830 minutes, 58 seconds125K. And if we remember our session limits, we started this project at 20%.
+31:0431 minutes, 4 secondsSo this one project took about 10% of my 5 hour limit and I'm on the $200 a month max plan. So keep that in mind because
+31:1231 minutes, 12 secondswe're writing so much output with our with our code. That is what's going to eat up the tokens. But if you can follow some best practices and clear stuff,
+31:2031 minutes, 20 secondsthen you're going to be able to dramatically reduce that. The other thing to note is that if you're rendering multiple videos, your CPU,
+31:2731 minutes, 27 secondsyour RAM will feel it. So yesterday when I uploaded the video about cloud design,
+31:3131 minutes, 31 secondsmy facecam was all glitchy and I realized I was like, "Okay, that was so dumb." Because I was rendering like four videos as I was recording that one. So
+31:3931 minutes, 39 secondsif you're rendering multiple videos and your computer starts to feel slow,
+31:4231 minutes, 42 secondsthat's why. So maybe just only do one at a time or whatever you need to do there.
+Chapter 8: Final Thoughts
+31:4631 minutes, 46 secondsBut anyways, that is going to do it for this one. I hope you guys enjoyed. I hope you learned something new. Don't forget to go to the free school community to get all of the resources that you need. But if you enjoyed, give
+31:5431 minutes, 54 secondsit a like. Helps me out a ton. And I appreciate you guys making it to the end of the video. And I will see you in the next one.
+

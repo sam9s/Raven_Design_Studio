@@ -1,0 +1,63 @@
+# Secrets
+.env
+.env.local
+.env.*.local
+
+# Claude Code machine state
+.claude/cache/
+.claude/sessions/
+.claude/history/
+.claude/settings.local.json
+
+# Hyperframes local state
+node_modules/
+.hyperframes-cache/
+dist/
+build/
+
+# Render artifacts — never commit output MP4s; GitHub is not an asset CDN
+renders/
+**/renders/
+*.mp4
+*.mov
+*.webm
+*.mkv
+*.gif
+*.webp
+
+# Source media (keep off git by default; enable per-project via !video-projects/<id>/assets/.gitkeep if small)
+*.mp3
+*.wav
+*.flac
+*.aac
+*.m4a
+
+# Large binaries
+*.psd
+*.ai
+*.sketch
+*.fig
+
+# Cloned reference repos — do not commit
+_analysis/
+
+# OS / editor noise
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+!.vscode/settings.json.example
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Temporary
+tmp/
+.tmp/
