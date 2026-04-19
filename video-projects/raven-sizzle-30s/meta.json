@@ -1,10 +1,12 @@
 {
-  "id": "REPLACE_ME",
-  "name": "Replace with the video's display name",
+  "id": "raven-sizzle-30s",
+  "name": "Raven Solutions — 30s Sizzle",
   "theme": "graphite-dark",
   "dimensions": { "width": 1920, "height": 1080 },
   "fps": 30,
   "durationSeconds": 30,
   "orientation": "landscape",
-  "tags": ["raven-solutions"]
+  "tags": ["raven-solutions", "sizzle", "brand", "silent-with-music"],
+  "status": "storyboard-draft",
+  "createdAt": "2026-04-19"
 }
