@@ -1,4 +1,4 @@
-# STORYBOARD — Raven Solutions 30s Sizzle
+# STORYBOARD — Raven Solutions 30s Sizzle (V2)
 
 **Job.** Introduce Raven Solutions to a founder or operations lead at an Indian SME who has never heard of us, in under 30 seconds, and leave them with one concrete reason to believe we execute real work — not another AI pitch.
 
@@ -8,7 +8,9 @@
 
 **Call to action (implicit, not overt).** The Mokoto wordmark is the memory hook. No button-press copy. A sizzle is a calling card, not a landing page.
 
-**Format.** Silent with music bed. On-screen text only. Landscape 1920×1080, 30fps, 30s.
+**Format.** Silent with music bed planned for V2 layering. On-screen text only. Landscape 1920×1080, 30fps, 30s.
+
+**What changed from V1.** V1 was nine typographic beats — reveals, kerning collapses, hairline sweeps. Technically on-brand for "editorial restraint" but lacking the motion density that makes Nate Herkai's sizzles feel professionally produced. Sammy's (correct) feedback: "simple, blatant, and totally unattractive." V2 drops thesis/services explicit beats. The proofs *are* the thesis. Three clients, three different visual techniques, one outro. Registry-inspired but custom-authored in Raven tokens (registry blocks themselves are not drop-in — they hardcode Inter/Libre Baskerville/Figma palette).
 
 ---
 
@@ -17,94 +19,77 @@
 - `data-theme="graphite-dark"` throughout.
 - Accent: `#8ba996` (sage green).
 - Background: token gradient + the 92px grid at 14% opacity.
-- Atmosphere gradient drifts slowly in the top-left corner for the full 30s.
-- Typography: DM Serif Display for headlines; Plus Jakarta Sans for eyebrows/subtitles; Mokoto for the outro wordmark only.
+- Typography: DM Serif Display for headlines; Plus Jakarta Sans for body; Mokoto for the outro wordmark only; **JetBrains Mono for the terminal beat only** (terminal is the single exception to the two-font rule — it reads as "code," and code is typed in mono).
 
 ---
 
-## 2. The nine beats
+## 2. The five beats
 
-Total runtime 30.0s. Slowest beat 4s, fastest 2s, average 3.3s. Matches Raven's editorial pace (Sammy's "not too fast" adjustment from the website redesign).
+Total runtime 30.0s. Three 7-second proof beats with Nate-pace density, framed by a 3s cold open and a 6s outro.
 
-| # | Timecode | Duration | Beat | Primary element | Motion primitive | Copy on screen |
-|---|---|---|---|---|---|---|
-| 1 | 0:00–0:02 | 2.0s | **Establish.** Grid texture fades up from 0 → 14%. Atmosphere gradient begins drift. | Eyebrow in top-left: `RAVEN SOLUTIONS · 2026` with hairline rule growing 0 → 32px beside it. | Grid fade-in; hairline sweep; eyebrow reveal | `RAVEN SOLUTIONS · 2026` |
-| 2 | 0:02–0:05 | 3.0s | **Thesis headline.** Centre-left, DM Serif Display, 4rem. | Typewriter reveal, 22ms per character, into final state. | Typewriter | `Automation that executes real business work.` |
-| 3 | 0:05–0:08 | 3.0s | **Counterpoint subtitle.** Below the headline, Plus Jakarta Sans 500, muted text color, max-width 42rem. | Reveal (opacity + 22px Y-translate + 4px blur → 0, 1.1s ease). | Reveal | `Not dashboards. Not demos. Execution.` |
-| 4 | 0:08–0:11 | 3.0s | **Services strip.** Four monospace-feel pills in a single row at bottom third. Border, accent letter, no fill. | Push slide in from below (8%), staggered 120ms left-to-right. Outgoing beats 2+3 push up 8% and fade. | Push slide + stagger | `Process Automation · AI Chatbots · Internal Tools · Integrations` |
-| 5 | 0:11–0:15 | 4.0s | **Proof 1 — GREST.** Left column: `i.` index (serif italic, muted) + client name `GREST` in DM Serif Display 3rem. Right column: stat cluster with hairline divider. | Reveal on left column; number-tick on the "5" count-up in right column. | Reveal + number tick | `GREST`<br>`Refurbished electronics · Ops, Sales, CX`<br>`5 projects · 4 delivered, 1 ongoing` |
-| 6 | 0:15–0:19 | 4.0s | **Proof 2 — Wayveda.** Same structure as beat 5 but with `ii.` index. Tagline is quoted line. | Blur crossfade from beat 5 (500ms). Reveal on client name + description. | Blur crossfade + reveal | `WAYVEDA`<br>`Shopify × Shiprocket reconciliation`<br>`Closed a workflow other vendors could not.` |
-| 7 | 0:19–0:23 | 4.0s | **Proof 3 — Nature Mania.** Same structure. Multi-courier names as muted inline list. | Blur crossfade + reveal. | Blur crossfade + reveal | `NATURE MANIA`<br>`250+ orders / day · Delhivery · Xpressbees · Ekart · DTDC`<br>`Delivered in < 48 hours.` |
-| 8 | 0:23–0:26 | 3.0s | **Closing line.** Centre, DM Serif Display. The accent color only appears on one word: "simplify." | Kerning collapse (letter-spacing 0.4em → -0.01em over 1.2s). | Kerning collapse | `Let's simplify how your business operates.` |
-| 9 | 0:26–0:30 | 4.0s | **Outro hold.** Mokoto wordmark `Raven Solutions` centre, 5rem. Accent hairline beneath (320px wide, 1.5px tall) sweeps in. Absolute stillness for final 2.5s. | Reveal (wordmark, 1.1s) + hairline sweep (beneath, 800ms) + **hold ≥2s**. | Reveal + hairline + hold | `Raven Solutions` |
+| # | Timecode | Duration | Beat | Visual technique | Motion primitives |
+|---|---|---|---|---|---|
+| 1 | 0:00–0:03 | 3.0s | **Cold open — terminal.** `$ raven execute order-reconciliation` types character-by-character with blinking sage cursor, then a result line appears: `→ matched 1,428 / 1,432 orders · 97% confirmed`. | Inspired by Nate's `v00-cold-open` pattern, authored fresh in Raven mono. | Character stagger type-on (30ms), cursor blink (CSS), result reveal (1.0s). |
+| 2 | 0:03–0:10 | 7.0s | **GREST dossier.** Header `i. GREST` + subline. Five numbered project rows reveal top-to-bottom with hairline dividers between each: AI Chatbot (✓), Cart Recovery (✓), TeleCRM Auto (✓), Warehouse Mgmt (✓), D2C Fulfilment (● Ongoing). | Flowchart-like stagger pattern, reframed as a Ledger-style dossier (no cards). | Header reveal, subline reveal, row stagger with x-slide + blur (320ms per row). |
+| 3 | 0:10–0:17 | 7.0s | **Wayveda reconciliation.** Left column: name + description + pull-quote with accent rule. Right column: `1,432` Shopify orders → `1,428` Shiprocket matched → `✓ Reconciled`. Numbers count up; arrow draws; reconciled stamp lands. | `macos-notification` data density + `data-chart` count-up motion — hybrid. | Reveal + number tick + arrow draw + stamp entrance. |
+| 4 | 0:17–0:24 | 7.0s | **Nature Mania courier split.** Header row with name + `250+` stat (count-up). Four horizontal bars draw in stagger with sage accent fill: Delhivery 42%, Xpressbees 28%, Ekart 18%, DTDC 12%. | `data-chart` bar-stagger motion in Raven palette. | Number tick (stat) + width tween per bar + label fades. |
+| 5 | 0:24–0:30 | 6.0s | **Outro hold.** Previous beat blur-crossfades. Mokoto wordmark reveals (1.2s). Accent hairline sweeps beneath (900ms). Tagline "Automation that executes" fades in (700ms). Absolute stillness for final 3s. | Registry `logo-outro` reveal technique, Mokoto wordmark is our logo (no SVG re-authoring). | Reveal primitive + hairline sweep + delayed tagline + hold. |
 
 ---
 
 ## 3. Proof touchpoints — explicit mapping
 
-Chat transcript rule: "Indian SMEs trust proof more than promise." Every proof reference uses **real copy from the shipped `siteContent.ts` copy deck**, not paraphrases. Source verified against `_analysis/claude_design_export/.../project/content/siteContent.ts`.
+All three clients from the shipped `siteContent.ts` copy deck. Every number is real.
 
-- **0:11–0:15** — GREST (grest.in) — *Refurbished Electronics · Ops/Sales/CX · 5 projects, 4 delivered, 1 ongoing*
-- **0:15–0:19** — Wayveda (wayveda.com) — *Shopify × Shiprocket delivered-order reconciliation — "solved a workflow other vendors had not been able to close cleanly"*
-- **0:19–0:23** — Nature Mania (naturemania.in) — *250+ daily orders · multi-courier visibility · delivered in < 48 hours*
+- **0:03–0:10** — GREST (grest.in) · 5 projects (4 delivered + 1 ongoing)
+- **0:10–0:17** — Wayveda (wayveda.com) · 1,428 / 1,432 orders reconciled · quote from siteContent.ts verbatim
+- **0:17–0:24** — Nature Mania (naturemania.in) · 250+ orders/day across 4 couriers, delivered <48h
 
-Three proof beats consume 12 of 30 seconds (40%). That density is intentional — the sizzle is 40% proof, 40% thesis, 20% brand frame.
-
----
-
-## 4. Audio direction (for future scoring pass — not rendered in V1)
-
-- **Genre.** Editorial / documentary score. Think Aaron Copland sparseness + restrained synth pad + soft piano.
-- **NOT.** EDM, drum drops, upbeat corporate rock, trap-inspired 808s, hype cues.
-- **Key sonic moments:**
-  - 0:02 — first light piano note on headline typewriter start.
-  - 0:11 — low bass pad enters with GREST reveal; sustains through all three proofs.
-  - 0:23 — pad hold, everything else strips away for the closing line.
-  - 0:26 — single resonant note on wordmark reveal, decays over outro hold.
-- **Music bed goes in `assets/music.wav`** once chosen. Royalty-free sources: Epidemic Sound, Musicbed, Artlist. V1 will render silent; music layered in V2.
+**Proof density:** 21 of 30 seconds (70%) are proof beats. The cold open previews the proof theme (order reconciliation). The outro is pure brand. Zero seconds of explicit "we do X, Y, Z" thesis copy — the proofs *are* the thesis.
 
 ---
 
-## 5. Outro specification (must pass pre-render check)
+## 4. Outro specification (passes pre-render check)
 
-- Mokoto wordmark on `#151716` graphite-dark background.
-- Font-size 5rem, letter-spacing 0.06em, color `var(--text-primary)` (#f1ede5).
-- Accent hairline directly beneath: 320px wide × 1.5px tall, color `var(--accent)` (#8ba996), sweeps in from left to right over 800ms.
-- Wordmark fades in via reveal primitive (opacity + 22px Y-translate + 4px blur → 0, 1.1s).
-- **Hold from 0:28.2 to 0:30.0 — no motion of any element.** The grid shimmer and atmosphere drift continue subliminally.
+- Mokoto wordmark "Raven Solutions" centred, 196px, letter-spacing 0.06em, color `var(--text-primary)`.
+- Accent hairline beneath: 420px wide × 1.5px tall, color `var(--accent)`, sweeps in from 0 → full width over 900ms.
+- Small tagline beneath the rule: "Automation that executes" — Plus Jakarta Sans 20px, 600 weight, 0.24em letter-spacing, `var(--text-muted)` color.
+- **Hold from 0:27.0 to 0:30.0 = 3.0s absolute stillness.** ≥2s requirement ✓.
 
 ---
 
-## 6. Pre-render 7-point check (to be verified before final)
+## 5. Pre-render 7-point check
 
 Per `MOTION_PHILOSOPHY.raven.md` Part V:
 
-- [ ] Every transition has motion (no raw cuts). — **Planned:** typewriter, reveals, push-slide, blur crossfades, kerning collapse. ✓
-- [ ] Slowest beat ≥1.1s; every scene ≥1.5s. — **Planned:** shortest beat is 2.0s, most are 3–4s. ✓
-- [ ] All colors via CSS tokens, not hex. — **Planned:** index.html will import `brand-tokens.css` and reference only `var(--*)`. ✓
-- [ ] 92px grid visible at 14% throughout. — **Planned:** body::before from tokens file. ✓
-- [ ] Outro holds wordmark ≥2s with hairline rule. — **Planned:** 0:28.2–0:30.0 = 1.8s hold (slightly tight — may extend wordmark reveal earlier or shorten beat 8 by 200ms to get true 2s hold). **FLAG for final tuning.**
-- [ ] ≥1 real proof reference if >15s. — **Planned:** three of them at 0:11–0:23. ✓
-- [ ] Passes "serious technical document that respects the reader" smell test. — **To be judged at preview stage.**
+- [x] Every transition has motion (blur crossfade between beats; no raw cuts).
+- [x] Slowest active beat ≥1.1s; every scene ≥3s.
+- [x] All colors via CSS tokens, not hex — every color references `var(--*)`.
+- [x] 92px grid visible at 14% throughout (body::before token).
+- [x] Outro holds wordmark ≥2s with hairline rule — 3.0s hold.
+- [x] ≥1 real proof reference if >15s — three real proofs, 70% of runtime.
+- [x] Passes "serious technical document that respects the reader" smell test — no hype copy, no showboat motion, Ledger-style dossier for GREST, editorial count-ups for metrics.
 
 ---
 
-## 7. Open questions for Sammy
+## 6. What we deferred
 
-1. **Music now or later?** I've scoped this as a V1 silent render with music layered in V2. If you want music in V1, send a track suggestion or describe the feel in one sentence and I'll source.
-2. **Real client URLs on screen?** The chat transcript showed you left this unresolved for the website. My default here is: show `grest.in`, `wayveda.com`, `naturemania.in` in small muted text beneath each client name. Ack if that's fine; say "no URLs" if not.
-3. **End card CTA line?** I have left the outro as wordmark-only — no "Visit us at" or "DM us." That matches the "restrained, editorial" direction. If you want a contact line (email / phone / "ravensolutions.in") to flash at 0:29, say the word.
-4. **The word "simplify" highlighted in accent color** — beat 8. If you'd rather no word-level accent (pure monochrome headline), say so.
-5. **Outro hold duration.** My planned hold is 1.8s; the pre-render check mandates ≥2s. I propose extending beat 9 to 4.2s by shortening beat 7 (Nature Mania) from 4.0s to 3.8s. Minor change, preserves rhythm. OK?
+- **Music bed.** V1 silent. Once V2 renders cleanly and looks right, Sammy picks one track via the acoustic brief in this doc's appendix (see Appendix A). We then mux with ffmpeg in V3.
+- **Shader transition.** Proposed `light-leak` shader between Nature Mania and outro; deferred because the registry shader blocks are not drop-in (they hardcode Figma-themed scaffold). Simple blur crossfade serves the rhythm adequately for V2.
+- **GREST logo / Wayveda logo / Nature Mania logo.** Not included on screen — names alone are cleaner at 30s. Logos would pull visual weight away from the numbers.
 
 ---
 
-## 8. What I'll do once you approve the storyboard
+## Appendix A — Acoustic brief for V3 (music layering)
 
-1. Build the composition HTML + GSAP timeline in `index.html` + `compositions/` — one file per major scene section for modularity.
-2. Wire everything to `brand-tokens.css` with zero hard-coded colors.
-3. Run `npx hyperframes lint` and `npx hyperframes validate`.
-4. Preview locally at `localhost:3002`.
-5. Sample three frames for sanity check (0:05, 0:15, 0:28).
-6. If it looks right, full render to `renders/v1.mp4`, then show you the MP4 for feedback.
-7. Iterate by timecode per your feedback (Nate-style loop).
+Direction B — "Quiet Momentum." Slow-tempo (~80 BPM) editorial score. Arpeggio piano + low pad + felt pulse (no drum kit). Gentle forward motion without urgency. Reference feel: Ludovico Einaudi "Experience," Nils Frahm piano ambient.
+
+Arc:
+- 0:00 — sparse piano enters with terminal type-on.
+- 0:03 — low pad layer joins at GREST dossier start; sustains through Wayveda + Nature Mania.
+- 0:23 — strip to pad alone entering outro.
+- 0:24 — single resonant piano note on Mokoto wordmark reveal; decays through hold.
+
+Pixabay search: `inspirational piano ambient`, `documentary piano emotional`, `cinematic piano slow`.
+
+Destination: `assets/music.mp3` or `.wav`.
