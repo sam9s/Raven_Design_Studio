@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=1920, height=1080" />
-  <title>Raven Solutions — 30s Sizzle V2</title>
+  <title>Raven Solutions — 30s Sizzle V3</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=block" rel="stylesheet" />
@@ -52,7 +52,6 @@
       -webkit-font-smoothing: antialiased;
     }
 
-    /* Raven's signature 92px grid texture. */
     body::before {
       content: '';
       position: fixed;
@@ -75,7 +74,6 @@
 
     .beat { position: absolute; inset: 0; opacity: 0; }
 
-    /* Shared typographic primitives across beats. */
     .index-numeral {
       font-family: var(--font-display);
       font-style: italic;
@@ -92,6 +90,8 @@
 
     /* ==============================================================
      * BEAT 1 — Cold open terminal (0.0 – 3.0s)
+     * Cursor-follow fix: b1-cmd uses max-width tween + overflow:hidden,
+     * cursor is an inline sibling that rides the edge automatically.
      * ============================================================== */
     .b1-stage {
       position: absolute;
@@ -106,17 +106,30 @@
       color: var(--text-secondary);
       line-height: 1.4;
       white-space: nowrap;
+      display: flex;
+      align-items: baseline;
     }
-    .b1-prompt .b1-dollar { color: var(--accent); font-weight: 700; margin-right: 18px; }
-    .b1-prompt .b1-cmd { color: var(--text-primary); font-weight: 500; }
-    .b1-prompt .b1-char { opacity: 0; }  /* wrapped by script */
+    .b1-dollar {
+      color: var(--accent);
+      font-weight: 700;
+      margin-right: 18px;
+    }
+    .b1-cmd {
+      display: inline-block;
+      overflow: hidden;
+      white-space: nowrap;
+      max-width: 0;
+      color: var(--text-primary);
+      font-weight: 500;
+      vertical-align: baseline;
+    }
     .b1-cursor {
       display: inline-block;
       width: 14px;
       height: 40px;
       background: var(--accent);
-      vertical-align: text-bottom;
-      margin-left: 2px;
+      margin-left: 4px;
+      transform: translateY(6px);
       animation: b1-blink 0.9s step-end infinite;
     }
     @keyframes b1-blink {
@@ -162,7 +175,6 @@
       font-size: 26px;
       color: var(--text-secondary);
       margin-bottom: 64px;
-      letter-spacing: 0.01em;
     }
     .b2-rows { display: flex; flex-direction: column; }
     .b2-row {
@@ -184,7 +196,6 @@
     .b2-row__name {
       font-family: var(--font-display);
       font-size: 42px;
-      font-weight: 400;
       color: var(--text-primary);
       letter-spacing: -0.01em;
     }
@@ -212,124 +223,347 @@
     .b2-row__status--ongoing::before   { content: '● '; }
 
     /* ==============================================================
-     * BEAT 3 — Wayveda reconciliation (10.0 – 17.0s)
+     * BEAT 3 — Wayveda: browser-framed Shopify-admin aesthetic
+     * (10.0 – 17.0s)
      * ============================================================== */
     .b3-stage {
       position: absolute;
-      top: 240px;
-      left: 200px;
-      right: 200px;
-      display: grid;
-      grid-template-columns: 1fr 80px 1fr;
-      gap: 40px;
-      align-items: start;
+      top: 80px;
+      left: 100px;
+      right: 100px;
+      bottom: 120px;
     }
-    .b3-left { padding-top: 20px; }
-    .b3-left .eyebrow {
-      font-size: 24px;
+    .b3-eyebrow-strip {
+      display: flex;
+      align-items: baseline;
+      gap: 36px;
       margin-bottom: 22px;
-      display: inline-flex;
-      align-items: center;
-      gap: 16px;
     }
-    .b3-left .eyebrow::before {
-      content: '';
-      display: block;
-      width: 32px;
-      height: 1.5px;
-      background: var(--accent);
-    }
-    .b3-left h2 {
+    .b3-eyebrow-strip .index-numeral { font-size: 44px; }
+    .b3-eyebrow-strip h2 {
       font-family: var(--font-display);
-      font-size: 104px;
-      font-weight: 400;
+      font-size: 68px;
+      color: var(--text-primary);
       letter-spacing: -0.02em;
       line-height: 1;
-      color: var(--text-primary);
-      margin-bottom: 28px;
     }
-    .b3-left__desc {
+    .b3-eyebrow-strip .b3-context {
       font-family: var(--font-body);
-      font-size: 26px;
-      color: var(--text-secondary);
-      line-height: 1.5;
-      margin-bottom: 34px;
-      max-width: 620px;
-    }
-    .b3-left__quote {
-      font-family: var(--font-display);
-      font-size: 30px;
-      font-style: italic;
-      color: var(--text-secondary);
-      line-height: 1.4;
-      max-width: 620px;
-      padding-left: 24px;
-      border-left: 2px solid var(--accent);
-    }
-    .b3-divider {
-      width: 1px;
-      height: 420px;
-      background: var(--border);
-      justify-self: center;
-      margin-top: 40px;
-    }
-    .b3-right {
-      padding-top: 40px;
-      display: flex;
-      flex-direction: column;
-      gap: 40px;
-    }
-    .b3-metric {
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-    }
-    .b3-metric__label {
-      font-family: var(--font-body);
-      font-size: 16px;
+      font-size: 18px;
       font-weight: 600;
       letter-spacing: 0.14em;
       text-transform: uppercase;
       color: var(--text-muted);
+      align-self: center;
+      margin-left: auto;
     }
-    .b3-metric__value {
+
+    /* Browser chrome — macOS Safari-style window */
+    .b3-browser {
+      position: relative;
+      width: 100%;
+      height: calc(100% - 100px);
+      background: #ffffff;
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow:
+        0 40px 80px rgba(0, 0, 0, 0.55),
+        0 0 0 1px rgba(255, 255, 255, 0.06);
+    }
+    .b3-chrome {
+      height: 54px;
+      background: linear-gradient(180deg, #e8ebef, #dde1e6);
+      display: flex;
+      align-items: center;
+      padding: 0 22px;
+      gap: 16px;
+      border-bottom: 1px solid #c8cdd3;
+    }
+    .b3-traffic {
+      display: flex;
+      gap: 8px;
+    }
+    .b3-traffic span {
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      display: block;
+    }
+    .b3-traffic .tl-r { background: #ed6a5e; }
+    .b3-traffic .tl-y { background: #f5bf4f; }
+    .b3-traffic .tl-g { background: #61c554; }
+    .b3-url-bar {
+      flex: 1;
+      max-width: 620px;
+      margin: 0 auto;
+      height: 32px;
+      background: #f7f9fb;
+      border: 1px solid #c8cdd3;
+      border-radius: 7px;
+      display: flex;
+      align-items: center;
+      padding: 0 14px;
+      font-family: var(--font-mono);
+      font-size: 14px;
+      color: #4a5058;
+      gap: 10px;
+    }
+    .b3-url-lock { color: #61c554; font-size: 11px; }
+
+    /* Shopify-style admin interior */
+    .b3-admin {
+      display: grid;
+      grid-template-columns: 240px 1fr;
+      height: calc(100% - 54px);
+      background: #f6f6f7;
+      color: #202223;
+    }
+    .b3-sidebar {
+      background: #1a1a1a;
+      padding: 22px 0;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+    .b3-sidebar__brand {
+      padding: 0 22px 18px;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      margin-bottom: 14px;
+      font-family: var(--font-body);
+      font-size: 18px;
+      font-weight: 700;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .b3-sidebar__brand::before {
+      content: '';
+      display: block;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #008060;
+    }
+    .b3-sidebar__nav {
+      display: flex;
+      flex-direction: column;
+    }
+    .b3-sidebar__item {
+      padding: 10px 22px;
+      font-family: var(--font-body);
+      font-size: 15px;
+      color: rgba(255,255,255,0.75);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .b3-sidebar__item::before {
+      content: '';
+      display: block;
+      width: 14px;
+      height: 14px;
+      background: rgba(255,255,255,0.3);
+      border-radius: 3px;
+    }
+    .b3-sidebar__item--active {
+      background: rgba(255,255,255,0.08);
+      color: #fff;
+      border-left: 3px solid #008060;
+      padding-left: 19px;
+    }
+    .b3-sidebar__item--active::before { background: #008060; }
+
+    .b3-main {
+      padding: 36px 48px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+    }
+    .b3-main__head {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      border-bottom: 1px solid #e1e3e5;
+      padding-bottom: 22px;
+    }
+    .b3-main__title {
       font-family: var(--font-display);
-      font-size: 128px;
-      font-weight: 400;
-      color: var(--text-primary);
+      font-size: 40px;
+      color: #202223;
+      letter-spacing: -0.01em;
       line-height: 1;
+      margin-bottom: 8px;
+    }
+    .b3-main__subtitle {
+      font-family: var(--font-body);
+      font-size: 15px;
+      color: #6d7175;
+    }
+    .b3-main__date {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      color: #8c9196;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      text-align: right;
+    }
+
+    .b3-metrics {
+      display: grid;
+      grid-template-columns: 1fr 80px 1fr;
+      gap: 24px;
+      align-items: center;
+    }
+    .b3-metric-card {
+      background: #fff;
+      border: 1px solid #e1e3e5;
+      border-radius: 10px;
+      padding: 26px 32px;
+      box-shadow: 0 1px 0 rgba(0,0,0,0.04);
+    }
+    .b3-metric-card__label {
+      font-family: var(--font-body);
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #6d7175;
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .b3-metric-card__label::before {
+      content: '';
+      display: block;
+      width: 8px;
+      height: 8px;
+      border-radius: 2px;
+    }
+    .b3-metric-card--shopify .b3-metric-card__label::before { background: #008060; }
+    .b3-metric-card--shiprocket .b3-metric-card__label::before { background: #5b88cf; }
+    .b3-metric-card__value {
+      font-family: var(--font-display);
+      font-size: 88px;
+      color: #202223;
+      line-height: 0.9;
       letter-spacing: -0.03em;
     }
     .b3-arrow {
-      align-self: start;
-      margin-left: 32px;
       font-family: var(--font-mono);
-      font-size: 64px;
-      color: var(--accent);
+      font-size: 48px;
+      color: #008060;
+      text-align: center;
       opacity: 0;
-      line-height: 1;
+      font-weight: 700;
+    }
+
+    .b3-table {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      border-top: 1px solid #e1e3e5;
+      padding-top: 20px;
+      opacity: 0;
+    }
+    .b3-table__head {
+      display: grid;
+      grid-template-columns: 180px 1fr 180px 120px;
+      gap: 16px;
+      font-family: var(--font-body);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #6d7175;
+      padding-bottom: 8px;
+    }
+    .b3-table__row {
+      display: grid;
+      grid-template-columns: 180px 1fr 180px 120px;
+      gap: 16px;
+      font-family: var(--font-body);
+      font-size: 15px;
+      color: #202223;
+      padding: 6px 0;
+    }
+    .b3-table__row--matched::before {
+      content: '✓';
+      color: #008060;
+      font-weight: 700;
+      position: absolute;
+      margin-left: -20px;
     }
     .b3-reconciled {
-      align-self: start;
-      margin-left: 32px;
+      position: absolute;
+      right: 70px;
+      bottom: 40px;
+      padding: 12px 24px;
+      border-radius: 8px;
+      background: #008060;
+      color: #fff;
       font-family: var(--font-body);
-      font-size: 22px;
+      font-size: 14px;
       font-weight: 700;
-      letter-spacing: 0.16em;
+      letter-spacing: 0.14em;
       text-transform: uppercase;
-      color: var(--accent);
       opacity: 0;
+      transform: scale(0.9);
+      box-shadow: 0 6px 18px rgba(0, 128, 96, 0.35);
     }
-    .b3-reconciled::before { content: '✓ '; }
+    .b3-reconciled::before { content: '✓  '; }
+
+    /* Delight halo — sage pulse behind the reconciled stamp */
+    .b3-halo {
+      position: absolute;
+      right: 30px;
+      bottom: 10px;
+      width: 320px;
+      height: 150px;
+      background: radial-gradient(ellipse at center, var(--accent) 0%, transparent 65%);
+      opacity: 0;
+      transform: scale(0.5);
+      pointer-events: none;
+      filter: blur(20px);
+    }
 
     /* ==============================================================
      * BEAT 4 — Nature Mania courier split (17.0 – 24.0s)
+     * THEME SWITCH: warm-editorial (cream + deep forest)
      * ============================================================== */
+    #b4 {
+      /* Override tokens locally to warm-editorial */
+      --bg-primary: #fafaf7;
+      --bg-secondary: #f4f2ed;
+      --text-primary: #1a1a18;
+      --text-secondary: #6b6860;
+      --text-muted: #9c9a95;
+      --accent: #2d4a3e;
+      --accent-light: #3d6352;
+      --accent-subtle: #eaf0ed;
+      --border: #e3e0da;
+      background: var(--bg-primary);
+      color: var(--text-primary);
+    }
+    /* Reproduce the grid texture on the cream bg, visibly darker so it reads */
+    #b4::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(26,26,24,0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(26,26,24,0.04) 1px, transparent 1px);
+      background-size: 92px 92px;
+      pointer-events: none;
+    }
     .b4-stage {
       position: absolute;
       top: 140px;
       left: 200px;
       right: 200px;
+      z-index: 2;
     }
     .b4-header {
       display: flex;
@@ -344,18 +578,18 @@
       align-items: baseline;
       gap: 36px;
     }
-    .b4-header__left .index-numeral { font-size: 64px; }
+    .b4-header__left .index-numeral {
+      font-size: 64px;
+      color: var(--text-muted);
+    }
     .b4-header__left h2 {
       font-family: var(--font-display);
       font-size: 88px;
-      font-weight: 400;
+      color: var(--text-primary);
       letter-spacing: -0.02em;
       line-height: 1;
-      color: var(--text-primary);
     }
-    .b4-header__right {
-      text-align: right;
-    }
+    .b4-header__right { text-align: right; }
     .b4-stat {
       font-family: var(--font-display);
       font-size: 104px;
@@ -393,7 +627,7 @@
     .b4-bar-row__track {
       position: relative;
       height: 44px;
-      background: color-mix(in srgb, var(--bg-secondary) 85%, transparent);
+      background: var(--bg-secondary);
       border: 1px solid var(--border);
       overflow: hidden;
     }
@@ -460,13 +694,13 @@
        data-width="1920"
        data-height="1080">
 
-    <!-- ======================================================
-     * BEAT 1 — Cold open terminal (0.0 – 3.0s)
-     * ====================================================== -->
+    <!-- BEAT 1 — Cold open terminal -->
     <div class="beat" id="b1">
       <div class="b1-stage">
         <div class="b1-prompt">
-          <span class="b1-dollar">$</span><span class="b1-cmd" id="b1-cmd" data-text="raven execute order-reconciliation"></span><span class="b1-cursor" id="b1-cursor"></span>
+          <span class="b1-dollar">$</span>
+          <span class="b1-cmd" id="b1-cmd">raven execute order-reconciliation</span>
+          <span class="b1-cursor" id="b1-cursor"></span>
         </div>
         <div class="b1-result" id="b1-result">
           <span class="b1-arrow">→</span>matched <span class="b1-check">1,428</span> / 1,432 orders &middot; 97% confirmed
@@ -474,9 +708,7 @@
       </div>
     </div>
 
-    <!-- ======================================================
-     * BEAT 2 — GREST dossier (3.0 – 10.0s)
-     * ====================================================== -->
+    <!-- BEAT 2 — GREST dossier -->
     <div class="beat" id="b2">
       <div class="b2-stage">
         <div class="b2-header" id="b2-header">
@@ -514,36 +746,73 @@
       </div>
     </div>
 
-    <!-- ======================================================
-     * BEAT 3 — Wayveda reconciliation (10.0 – 17.0s)
-     * ====================================================== -->
+    <!-- BEAT 3 — Wayveda (browser-framed, Shopify-admin) -->
     <div class="beat" id="b3">
       <div class="b3-stage">
-        <div class="b3-left">
-          <div class="eyebrow">ii. Case Study</div>
+        <div class="b3-eyebrow-strip">
+          <span class="index-numeral">ii.</span>
           <h2>Wayveda</h2>
-          <p class="b3-left__desc">Shopify &times; Shiprocket delivered-order reconciliation for the operational reporting layer.</p>
-          <blockquote class="b3-left__quote">"Closed a workflow other vendors had not been able to close cleanly."</blockquote>
+          <span class="b3-context">Shopify &times; Shiprocket reconciliation</span>
         </div>
-        <div class="b3-divider"></div>
-        <div class="b3-right">
-          <div class="b3-metric">
-            <div class="b3-metric__label">Shopify orders</div>
-            <div class="b3-metric__value" id="b3-shopify">0</div>
+        <div class="b3-browser">
+          <div class="b3-chrome">
+            <div class="b3-traffic"><span class="tl-r"></span><span class="tl-y"></span><span class="tl-g"></span></div>
+            <div class="b3-url-bar">
+              <span class="b3-url-lock">🔒</span>
+              <span>wayveda.com/ops/delivered-reconciliation</span>
+            </div>
           </div>
-          <div class="b3-arrow" id="b3-arrow">&darr;</div>
-          <div class="b3-metric">
-            <div class="b3-metric__label">Shiprocket matched</div>
-            <div class="b3-metric__value" id="b3-shiprocket">0</div>
+          <div class="b3-admin">
+            <div class="b3-sidebar">
+              <div class="b3-sidebar__brand">Wayveda Ops</div>
+              <div class="b3-sidebar__nav">
+                <div class="b3-sidebar__item">Home</div>
+                <div class="b3-sidebar__item">Orders</div>
+                <div class="b3-sidebar__item b3-sidebar__item--active">Reconciliation</div>
+                <div class="b3-sidebar__item">Shipments</div>
+                <div class="b3-sidebar__item">Customers</div>
+                <div class="b3-sidebar__item">Reports</div>
+              </div>
+            </div>
+            <div class="b3-main">
+              <div class="b3-main__head">
+                <div>
+                  <div class="b3-main__title">Delivered Orders Reconciliation</div>
+                  <div class="b3-main__subtitle">Shopify fulfilment cross-checked with Shiprocket delivery records &middot; last 30 days</div>
+                </div>
+                <div class="b3-main__date">Raven &middot; Live sync</div>
+              </div>
+              <div class="b3-metrics">
+                <div class="b3-metric-card b3-metric-card--shopify">
+                  <div class="b3-metric-card__label">Shopify orders</div>
+                  <div class="b3-metric-card__value" id="b3-shopify">0</div>
+                </div>
+                <div class="b3-arrow" id="b3-arrow">→</div>
+                <div class="b3-metric-card b3-metric-card--shiprocket">
+                  <div class="b3-metric-card__label">Shiprocket matched</div>
+                  <div class="b3-metric-card__value" id="b3-shiprocket">0</div>
+                </div>
+              </div>
+              <div class="b3-table" id="b3-table">
+                <div class="b3-table__head">
+                  <div>Order</div>
+                  <div>Customer</div>
+                  <div>Courier</div>
+                  <div>Status</div>
+                </div>
+                <div class="b3-table__row"><div>#WY-10428</div><div>Priya S.</div><div>Delhivery</div><div style="color:#008060;font-weight:700">✓ Matched</div></div>
+                <div class="b3-table__row"><div>#WY-10427</div><div>Rohan M.</div><div>Xpressbees</div><div style="color:#008060;font-weight:700">✓ Matched</div></div>
+                <div class="b3-table__row"><div>#WY-10426</div><div>Anika P.</div><div>Delhivery</div><div style="color:#008060;font-weight:700">✓ Matched</div></div>
+              </div>
+            </div>
           </div>
+          <div class="b3-halo" id="b3-halo"></div>
           <div class="b3-reconciled" id="b3-reconciled">Reconciled</div>
         </div>
       </div>
     </div>
 
-    <!-- ======================================================
-     * BEAT 4 — Nature Mania courier split (17.0 – 24.0s)
-     * ====================================================== -->
+    <!-- BEAT 4 — Nature Mania (warm-editorial palette) -->
     <div class="beat" id="b4">
       <div class="b4-stage">
         <div class="b4-header">
@@ -581,9 +850,7 @@
       </div>
     </div>
 
-    <!-- ======================================================
-     * BEAT 5 — Outro (24.0 – 30.0s)
-     * ====================================================== -->
+    <!-- BEAT 5 — Outro -->
     <div class="beat" id="b5">
       <div class="b5-stage">
         <div class="b5-wordmark">Raven Solutions</div>
@@ -595,16 +862,14 @@
 
   <script>
     // --------------------------------------------------------------
-    // Pre-process: wrap the terminal command chars for staggered type-on.
+    // Pre-measure terminal command width so the cursor rides the edge
+    // of the max-width tween instead of parking at end-of-string.
     // --------------------------------------------------------------
-    (function wrapTerminalChars() {
-      const el = document.getElementById('b1-cmd');
-      const txt = el.dataset.text || '';
-      el.innerHTML = txt.split('').map(function (ch) {
-        const safe = ch === ' ' ? '&nbsp;' : ch;
-        return '<span class="b1-char">' + safe + '</span>';
-      }).join('');
-    })();
+    const b1Cmd = document.getElementById('b1-cmd');
+    // Measure fully-expanded width
+    b1Cmd.style.maxWidth = 'none';
+    const B1_FULL_W = Math.ceil(b1Cmd.scrollWidth) + 2;
+    b1Cmd.style.maxWidth = '0px';
 
     const OUT_EASE = 'cubic-bezier(0.16, 1, 0.3, 1)';
     const tl = gsap.timeline({ paused: true });
@@ -613,7 +878,10 @@
     // BEAT 1 — Cold open terminal (0.0 – 3.0)
     // ==============================================================
     tl.to('#b1', { opacity: 1, duration: 0.3, ease: 'power1.out' }, 0.0);
-    tl.to('.b1-char', { opacity: 1, duration: 0.02, stagger: 0.030, ease: 'none' }, 0.35);
+    tl.fromTo('#b1-cmd',
+      { maxWidth: 0 },
+      { maxWidth: B1_FULL_W, duration: 1.1, ease: 'none' },
+      0.35);
     tl.fromTo('#b1-result',
       { opacity: 0, y: 14, filter: 'blur(4px)' },
       { opacity: 1, y: 0, filter: 'blur(0px)', duration: 0.8, ease: OUT_EASE },
@@ -637,23 +905,23 @@
       { opacity: 0, x: -20, filter: 'blur(4px)' },
       { opacity: 1, x: 0, filter: 'blur(0px)', duration: 0.75, stagger: 0.32, ease: OUT_EASE },
       4.7);
-    // Hold through ~9.4s then fade out.
     tl.to('#b2', { opacity: 0, filter: 'blur(6px)', duration: 0.5, ease: 'power2.in' }, 9.5);
 
     // ==============================================================
     // BEAT 3 — Wayveda reconciliation (10.0 – 17.0)
+    // Browser window entrance + number tickers + delight halo
     // ==============================================================
     tl.set('#b3', { opacity: 1 }, 10.0);
-    tl.fromTo('.b3-left > *',
-      { opacity: 0, y: 22, filter: 'blur(4px)' },
-      { opacity: 1, y: 0, filter: 'blur(0px)', duration: 1.0, stagger: 0.15, ease: OUT_EASE },
+    tl.fromTo('.b3-eyebrow-strip',
+      { opacity: 0, y: 18, filter: 'blur(4px)' },
+      { opacity: 1, y: 0, filter: 'blur(0px)', duration: 0.9, ease: OUT_EASE },
       10.0);
-    tl.fromTo('.b3-divider',
-      { scaleY: 0, transformOrigin: 'top center' },
-      { scaleY: 1, duration: 0.8, ease: OUT_EASE },
-      10.3);
+    // Browser window comes in with a scale-from-below feel
+    tl.fromTo('.b3-browser',
+      { opacity: 0, y: 40, scale: 0.96, filter: 'blur(6px)' },
+      { opacity: 1, y: 0, scale: 1, filter: 'blur(0px)', duration: 1.0, ease: OUT_EASE, transformOrigin: 'center center' },
+      10.2);
 
-    // Shopify number count-up 0 → 1432
     const shopCounter = { val: 0 };
     tl.to(shopCounter, {
       val: 1432,
@@ -662,12 +930,10 @@
       onUpdate: function () {
         document.getElementById('b3-shopify').textContent = Math.round(shopCounter.val).toLocaleString();
       }
-    }, 11.2);
+    }, 11.3);
 
-    // Arrow reveal
-    tl.to('#b3-arrow', { opacity: 1, duration: 0.5 }, 12.4);
+    tl.to('#b3-arrow', { opacity: 1, duration: 0.5 }, 12.5);
 
-    // Shiprocket number count-up 0 → 1428
     const shipCounter = { val: 0 };
     tl.to(shipCounter, {
       val: 1428,
@@ -676,18 +942,25 @@
       onUpdate: function () {
         document.getElementById('b3-shiprocket').textContent = Math.round(shipCounter.val).toLocaleString();
       }
-    }, 12.9);
+    }, 13.0);
 
-    // Reconciled stamp
-    tl.fromTo('#b3-reconciled',
-      { opacity: 0, y: 14 },
+    tl.fromTo('#b3-table',
+      { opacity: 0, y: 10 },
       { opacity: 1, y: 0, duration: 0.6, ease: OUT_EASE },
-      14.1);
+      14.0);
+
+    // Delight halo — expands, decays behind the reconciled stamp.
+    tl.to('#b3-halo', { opacity: 0.85, scale: 1.3, duration: 0.35, ease: 'power2.out' }, 14.55);
+    tl.to('#b3-halo', { opacity: 0, scale: 1.7, duration: 0.55, ease: 'power2.in' }, 14.90);
+    tl.fromTo('#b3-reconciled',
+      { opacity: 0, scale: 0.85, y: 8 },
+      { opacity: 1, scale: 1, y: 0, duration: 0.45, ease: 'back.out(1.5)' },
+      14.60);
 
     tl.to('#b3', { opacity: 0, filter: 'blur(6px)', duration: 0.5, ease: 'power2.in' }, 16.5);
 
     // ==============================================================
-    // BEAT 4 — Nature Mania courier split (17.0 – 24.0)
+    // BEAT 4 — Nature Mania (17.0 – 24.0, WARM-EDITORIAL theme)
     // ==============================================================
     tl.set('#b4', { opacity: 1 }, 17.0);
     tl.fromTo('.b4-header__left',
@@ -695,7 +968,6 @@
       { opacity: 1, y: 0, filter: 'blur(0px)', duration: 1.0, ease: OUT_EASE },
       17.0);
 
-    // 250+ count-up
     const natCounter = { val: 0 };
     tl.to(natCounter, {
       val: 250,
@@ -710,8 +982,6 @@
       { opacity: 1, duration: 0.6, ease: OUT_EASE },
       17.3);
 
-    // Bars draw in, staggered.
-    // Each bar: name label fades in, then bar fill width tweens to target %, then pct label fades.
     const barTargets = [42, 28, 18, 12];
     barTargets.forEach(function (pct, i) {
       const t = 18.6 + i * 0.45;
@@ -736,9 +1006,7 @@
       24.6);
     tl.to('#b5-rule', { width: 420, duration: 0.9, ease: 'power2.out' }, 25.8);
     tl.to('#b5-tagline', { opacity: 1, duration: 0.7, ease: OUT_EASE }, 26.3);
-    // Hold 27.0 → 30.0 = 3s absolute stillness.
 
-    // Pad anchor (Nate's Law #11, MOTION_PHILOSOPHY.raven.md).
     tl.to({}, { duration: 30 }, 0);
 
     window.__timelines = window.__timelines || {};
