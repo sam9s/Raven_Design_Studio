@@ -147,80 +147,332 @@
     .b1-result .b1-check { color: var(--accent); font-weight: 700; }
 
     /* ==============================================================
-     * BEAT 2 — GREST dossier (3.0 – 10.0s)
+     * BEAT 2 — GREST: browser-framed IMS dashboard (3.0 – 10.0s)
+     * Uses GREST's actual emerald + crimson palette inside a macOS
+     * browser chrome. Mirrors beat 3 (Wayveda) structurally.
      * ============================================================== */
     .b2-stage {
       position: absolute;
-      top: 140px;
-      left: 200px;
-      width: 1520px;
+      top: 80px;
+      left: 100px;
+      right: 100px;
+      bottom: 120px;
     }
-    .b2-header {
+    .b2-eyebrow-strip {
       display: flex;
       align-items: baseline;
       gap: 36px;
-      margin-bottom: 24px;
+      margin-bottom: 22px;
     }
-    .b2-header .index-numeral { font-size: 72px; }
-    .b2-header h2 {
+    .b2-eyebrow-strip .index-numeral { font-size: 44px; }
+    .b2-eyebrow-strip h2 {
       font-family: var(--font-display);
-      font-size: 108px;
-      font-weight: 400;
+      font-size: 68px;
+      color: var(--text-primary);
       letter-spacing: -0.02em;
       line-height: 1;
-      color: var(--text-primary);
     }
-    .b2-subline {
-      font-family: var(--font-body);
-      font-size: 26px;
-      color: var(--text-secondary);
-      margin-bottom: 64px;
-    }
-    .b2-rows { display: flex; flex-direction: column; }
-    .b2-row {
-      display: grid;
-      grid-template-columns: 72px 1fr 200px;
-      align-items: center;
-      column-gap: 40px;
-      padding: 28px 0;
-      border-top: 1px solid var(--border);
-      opacity: 0;
-    }
-    .b2-row:last-child { border-bottom: 1px solid var(--border); }
-    .b2-row__num {
-      font-family: var(--font-display);
-      font-style: italic;
-      font-size: 28px;
-      color: var(--text-muted);
-    }
-    .b2-row__name {
-      font-family: var(--font-display);
-      font-size: 42px;
-      color: var(--text-primary);
-      letter-spacing: -0.01em;
-    }
-    .b2-row__status {
-      justify-self: end;
+    .b2-eyebrow-strip .b2-context {
       font-family: var(--font-body);
       font-size: 18px;
       font-weight: 600;
-      letter-spacing: 0.1em;
+      letter-spacing: 0.14em;
       text-transform: uppercase;
-      padding: 10px 18px;
-      border-radius: 4px;
+      color: var(--text-muted);
+      align-self: center;
+      margin-left: auto;
     }
-    .b2-row__status--delivered {
-      background: color-mix(in srgb, var(--accent) 14%, transparent);
-      color: var(--accent);
-      border: 1px solid color-mix(in srgb, var(--accent) 30%, transparent);
+
+    /* macOS Safari-style browser chrome */
+    .b2-browser {
+      position: relative;
+      width: 100%;
+      height: calc(100% - 100px);
+      background: #0a1210;
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow:
+        0 40px 80px rgba(0, 0, 0, 0.55),
+        0 0 0 1px rgba(255, 255, 255, 0.06);
     }
-    .b2-row__status--ongoing {
-      background: rgba(212, 165, 116, 0.12);
-      color: #d4a574;
-      border: 1px solid rgba(212, 165, 116, 0.3);
+    .b2-chrome {
+      height: 54px;
+      background: linear-gradient(180deg, #e8ebef, #dde1e6);
+      display: flex;
+      align-items: center;
+      padding: 0 22px;
+      gap: 16px;
+      border-bottom: 1px solid #c8cdd3;
     }
-    .b2-row__status--delivered::before { content: '✓ '; }
-    .b2-row__status--ongoing::before   { content: '● '; }
+    .b2-traffic { display: flex; gap: 8px; }
+    .b2-traffic span {
+      width: 14px; height: 14px;
+      border-radius: 50%;
+      display: block;
+    }
+    .b2-traffic .tl-r { background: #ed6a5e; }
+    .b2-traffic .tl-y { background: #f5bf4f; }
+    .b2-traffic .tl-g { background: #61c554; }
+    .b2-url-bar {
+      flex: 1;
+      max-width: 680px;
+      margin: 0 auto;
+      height: 32px;
+      background: #f7f9fb;
+      border: 1px solid #c8cdd3;
+      border-radius: 7px;
+      display: flex;
+      align-items: center;
+      padding: 0 14px;
+      font-family: var(--font-mono);
+      font-size: 14px;
+      color: #4a5058;
+      gap: 10px;
+    }
+    .b2-url-lock { color: #61c554; font-size: 11px; }
+
+    /* GREST IMS dashboard interior — dark + emerald */
+    .b2-app {
+      display: grid;
+      grid-template-columns: 260px 1fr;
+      height: calc(100% - 54px);
+      background: #0a1210;
+      color: #e6ebe7;
+    }
+    .b2-sidebar {
+      background: #06100d;
+      border-right: 1px solid rgba(255,255,255,0.04);
+      padding: 20px 0;
+      display: flex;
+      flex-direction: column;
+    }
+    .b2-sidebar__brand {
+      padding: 0 22px 18px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      margin-bottom: 16px;
+    }
+    .b2-sidebar__logo {
+      width: 40px; height: 40px;
+      border-radius: 50%;
+      background: radial-gradient(circle at 30% 30%, #ef4d6b, #c4223b);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-display);
+      font-size: 26px;
+      font-weight: 400;
+      font-style: italic;
+      line-height: 1;
+      box-shadow: 0 4px 14px rgba(196, 34, 59, 0.45);
+    }
+    .b2-sidebar__wordmark {
+      font-family: var(--font-body);
+      font-size: 18px;
+      font-weight: 700;
+      color: #22c55e;
+      letter-spacing: -0.01em;
+    }
+    .b2-sidebar__nav {
+      display: flex;
+      flex-direction: column;
+    }
+    .b2-sidebar__item {
+      padding: 11px 22px;
+      font-family: var(--font-body);
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(230, 235, 231, 0.55);
+      position: relative;
+    }
+    .b2-sidebar__item--active {
+      background: rgba(34, 197, 94, 0.10);
+      color: #22c55e;
+    }
+    .b2-sidebar__item--active::before {
+      content: '';
+      position: absolute;
+      left: 0; top: 0; bottom: 0;
+      width: 3px;
+      background: #22c55e;
+    }
+
+    .b2-main {
+      padding: 28px 38px;
+      display: flex;
+      flex-direction: column;
+      gap: 22px;
+      overflow: hidden;
+    }
+    .b2-main__head {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding-bottom: 18px;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+    .b2-main__title {
+      font-family: var(--font-display);
+      font-size: 42px;
+      color: #e6ebe7;
+      letter-spacing: -0.01em;
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+    .b2-main__subtitle {
+      font-family: var(--font-body);
+      font-size: 14px;
+      color: rgba(230, 235, 231, 0.55);
+    }
+    .b2-main__date {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: rgba(230, 235, 231, 0.45);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      text-align: right;
+    }
+    .b2-main__date strong {
+      display: block;
+      font-family: var(--font-body);
+      font-size: 13px;
+      color: #22c55e;
+      font-weight: 700;
+      margin-top: 4px;
+      letter-spacing: 0.05em;
+    }
+    .b2-section-label {
+      font-family: var(--font-body);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: rgba(230, 235, 231, 0.4);
+      margin-bottom: 2px;
+    }
+    .b2-metrics {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+    }
+    .b2-metric {
+      background: #15201b;
+      border: 1px solid rgba(255,255,255,0.05);
+      border-radius: 10px;
+      padding: 18px 22px;
+      position: relative;
+      overflow: hidden;
+    }
+    .b2-metric::before {
+      content: '';
+      position: absolute;
+      left: 0; top: 0; bottom: 0;
+      width: 3px;
+      background: #22c55e;
+    }
+    .b2-metric--warn::before { background: #f5bf4f; }
+    .b2-metric--accent::before { background: #8ba996; }
+    .b2-metric__label {
+      font-family: var(--font-body);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: rgba(230, 235, 231, 0.5);
+      margin-bottom: 8px;
+      line-height: 1.3;
+    }
+    .b2-metric__value {
+      font-family: var(--font-display);
+      font-size: 40px;
+      color: #e6ebe7;
+      line-height: 1;
+      letter-spacing: -0.02em;
+    }
+    .b2-metric__value--green { color: #22c55e; }
+
+    .b2-roadmap {
+      display: flex;
+      align-items: center;
+      gap: 0;
+      background: rgba(34, 197, 94, 0.06);
+      border: 1px solid rgba(34, 197, 94, 0.2);
+      border-radius: 8px;
+      padding: 14px 20px;
+      margin-top: auto;
+      opacity: 0;
+    }
+    .b2-roadmap__tag {
+      font-family: var(--font-body);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: #22c55e;
+      padding-right: 18px;
+      border-right: 1px solid rgba(34, 197, 94, 0.3);
+      white-space: nowrap;
+    }
+    .b2-roadmap__phases {
+      display: flex;
+      align-items: center;
+      gap: 0;
+      padding-left: 18px;
+      flex: 1;
+    }
+    .b2-phase {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding-right: 20px;
+      margin-right: 20px;
+      border-right: 1px solid rgba(255,255,255,0.06);
+      font-family: var(--font-body);
+      font-size: 12px;
+      color: rgba(230, 235, 231, 0.55);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+    .b2-phase:last-child {
+      border-right: none;
+      margin-right: 0;
+      padding-right: 0;
+    }
+    .b2-phase__dot {
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      background: rgba(230, 235, 231, 0.25);
+    }
+    .b2-phase--active { color: #22c55e; }
+    .b2-phase--active .b2-phase__dot {
+      background: #22c55e;
+      box-shadow: 0 0 8px rgba(34, 197, 94, 0.6);
+    }
+    .b2-phase--next .b2-phase__dot {
+      background: #f5bf4f;
+      box-shadow: 0 0 6px rgba(245, 191, 79, 0.4);
+    }
+    .b2-phase--next { color: rgba(245, 191, 79, 0.9); }
+
+    /* Delight halo under the roadmap strip */
+    .b2-halo {
+      position: absolute;
+      left: 38%;
+      bottom: 20px;
+      width: 420px;
+      height: 100px;
+      background: radial-gradient(ellipse at center, #22c55e 0%, transparent 65%);
+      opacity: 0;
+      transform: scale(0.5);
+      pointer-events: none;
+      filter: blur(24px);
+    }
 
     /* ==============================================================
      * BEAT 3 — Wayveda: browser-framed Shopify-admin aesthetic
@@ -708,39 +960,93 @@
       </div>
     </div>
 
-    <!-- BEAT 2 — GREST dossier -->
+    <!-- BEAT 2 — GREST IMS dashboard inside browser frame -->
     <div class="beat" id="b2">
       <div class="b2-stage">
-        <div class="b2-header" id="b2-header">
+        <div class="b2-eyebrow-strip">
           <span class="index-numeral">i.</span>
           <h2>GREST</h2>
+          <span class="b2-context">Flagship engagement &middot; GREST ERP roadmap</span>
         </div>
-        <p class="b2-subline" id="b2-subline">Refurbished electronics &middot; 5 projects delivered &middot; Ops, Sales, Customer Experience</p>
-        <div class="b2-rows">
-          <div class="b2-row" data-rownum="1">
-            <div class="b2-row__num">i.</div>
-            <div class="b2-row__name">AI Chatbot</div>
-            <div class="b2-row__status b2-row__status--delivered">Delivered</div>
+        <div class="b2-browser">
+          <div class="b2-chrome">
+            <div class="b2-traffic"><span class="tl-r"></span><span class="tl-y"></span><span class="tl-g"></span></div>
+            <div class="b2-url-bar">
+              <span class="b2-url-lock">🔒</span>
+              <span>wh.sam9scloud.in/ims/dashboard</span>
+            </div>
           </div>
-          <div class="b2-row" data-rownum="2">
-            <div class="b2-row__num">ii.</div>
-            <div class="b2-row__name">Abandoned Cart Recovery</div>
-            <div class="b2-row__status b2-row__status--delivered">Delivered</div>
-          </div>
-          <div class="b2-row" data-rownum="3">
-            <div class="b2-row__num">iii.</div>
-            <div class="b2-row__name">TeleCRM Assignment Automation</div>
-            <div class="b2-row__status b2-row__status--delivered">Delivered</div>
-          </div>
-          <div class="b2-row" data-rownum="4">
-            <div class="b2-row__num">iv.</div>
-            <div class="b2-row__name">Warehouse Management System</div>
-            <div class="b2-row__status b2-row__status--delivered">Delivered</div>
-          </div>
-          <div class="b2-row" data-rownum="5">
-            <div class="b2-row__num">v.</div>
-            <div class="b2-row__name">D2C Fulfilment Workflow</div>
-            <div class="b2-row__status b2-row__status--ongoing">Ongoing</div>
+          <div class="b2-app">
+            <div class="b2-sidebar">
+              <div class="b2-sidebar__brand">
+                <div class="b2-sidebar__logo">G</div>
+                <div class="b2-sidebar__wordmark">Grest IMS</div>
+              </div>
+              <div class="b2-sidebar__nav">
+                <div class="b2-sidebar__item">Core Views</div>
+                <div class="b2-sidebar__item">Reports &amp; Diagnostics</div>
+                <div class="b2-sidebar__item">Operational Workspaces</div>
+                <div class="b2-sidebar__item">D2C Operations</div>
+                <div class="b2-sidebar__item b2-sidebar__item--active">Inventory Operations</div>
+                <div class="b2-sidebar__item">Sales &amp; Returns</div>
+                <div class="b2-sidebar__item">Operations</div>
+              </div>
+            </div>
+            <div class="b2-main">
+              <div class="b2-main__head">
+                <div>
+                  <div class="b2-main__title">Dashboard</div>
+                  <div class="b2-main__subtitle">Operational overview across intake, ELS, QC TL, repair, inventory, and sales</div>
+                </div>
+                <div class="b2-main__date">
+                  Signed in as Sammy &middot; System Admin
+                  <strong>UAT &middot; Go-live imminent</strong>
+                </div>
+              </div>
+              <div>
+                <div class="b2-section-label">Executive snapshot</div>
+                <div class="b2-metrics">
+                  <div class="b2-metric">
+                    <div class="b2-metric__label">Total active inventory</div>
+                    <div class="b2-metric__value b2-metric__value--green" id="b2-m1">0</div>
+                  </div>
+                  <div class="b2-metric">
+                    <div class="b2-metric__label">Intake queue</div>
+                    <div class="b2-metric__value" id="b2-m2">0</div>
+                  </div>
+                  <div class="b2-metric b2-metric--warn">
+                    <div class="b2-metric__label">Current cost position</div>
+                    <div class="b2-metric__value" id="b2-m3">₹0</div>
+                  </div>
+                  <div class="b2-metric b2-metric--accent">
+                    <div class="b2-metric__label">Validations handled</div>
+                    <div class="b2-metric__value" id="b2-m4">0</div>
+                  </div>
+                </div>
+              </div>
+              <div class="b2-roadmap" id="b2-roadmap">
+                <div class="b2-roadmap__tag">GREST ERP roadmap</div>
+                <div class="b2-roadmap__phases">
+                  <div class="b2-phase b2-phase--active">
+                    <span class="b2-phase__dot"></span>
+                    <span>Phase 1 &middot; IMS &middot; UAT</span>
+                  </div>
+                  <div class="b2-phase b2-phase--next">
+                    <span class="b2-phase__dot"></span>
+                    <span>Phase 2 &middot; D2C</span>
+                  </div>
+                  <div class="b2-phase">
+                    <span class="b2-phase__dot"></span>
+                    <span>Phase 3 &middot; B2C</span>
+                  </div>
+                  <div class="b2-phase">
+                    <span class="b2-phase__dot"></span>
+                    <span>Phase 4 &middot; B2B</span>
+                  </div>
+                </div>
+              </div>
+              <div class="b2-halo" id="b2-halo"></div>
+            </div>
           </div>
         </div>
       </div>
@@ -890,21 +1196,67 @@
     tl.to('#b1', { opacity: 0, filter: 'blur(6px)', duration: 0.5, ease: 'power2.in' }, 2.60);
 
     // ==============================================================
-    // BEAT 2 — GREST dossier (3.0 – 10.0)
+    // BEAT 2 — GREST IMS dashboard in browser frame (3.0 – 10.0)
     // ==============================================================
     tl.set('#b2', { opacity: 1 }, 3.0);
-    tl.fromTo('#b2-header',
-      { opacity: 0, y: 22, filter: 'blur(4px)' },
-      { opacity: 1, y: 0, filter: 'blur(0px)', duration: 1.1, ease: OUT_EASE },
+    tl.fromTo('.b2-eyebrow-strip',
+      { opacity: 0, y: 18, filter: 'blur(4px)' },
+      { opacity: 1, y: 0, filter: 'blur(0px)', duration: 0.9, ease: OUT_EASE },
       3.0);
-    tl.fromTo('#b2-subline',
-      { opacity: 0, y: 14 },
-      { opacity: 1, y: 0, duration: 0.9, ease: OUT_EASE },
-      3.6);
-    tl.fromTo('.b2-row',
-      { opacity: 0, x: -20, filter: 'blur(4px)' },
-      { opacity: 1, x: 0, filter: 'blur(0px)', duration: 0.75, stagger: 0.32, ease: OUT_EASE },
-      4.7);
+    tl.fromTo('.b2-browser',
+      { opacity: 0, y: 40, scale: 0.96, filter: 'blur(6px)' },
+      { opacity: 1, y: 0, scale: 1, filter: 'blur(0px)', duration: 1.0, ease: OUT_EASE, transformOrigin: 'center center' },
+      3.25);
+
+    // Four metric count-ups, staggered
+    const m1 = { val: 0 };
+    tl.to(m1, {
+      val: 41340,
+      duration: 1.1,
+      ease: 'power2.out',
+      onUpdate: function () {
+        document.getElementById('b2-m1').textContent = Math.round(m1.val).toLocaleString();
+      }
+    }, 4.4);
+
+    const m2 = { val: 0 };
+    tl.to(m2, {
+      val: 41075,
+      duration: 1.1,
+      ease: 'power2.out',
+      onUpdate: function () {
+        document.getElementById('b2-m2').textContent = Math.round(m2.val).toLocaleString();
+      }
+    }, 4.7);
+
+    const m3 = { val: 0 };
+    tl.to(m3, {
+      val: 207862,
+      duration: 1.1,
+      ease: 'power2.out',
+      onUpdate: function () {
+        document.getElementById('b2-m3').textContent = '₹' + Math.round(m3.val).toLocaleString('en-IN');
+      }
+    }, 5.0);
+
+    const m4 = { val: 0 };
+    tl.to(m4, {
+      val: 31197,
+      duration: 1.1,
+      ease: 'power2.out',
+      onUpdate: function () {
+        document.getElementById('b2-m4').textContent = Math.round(m4.val).toLocaleString();
+      }
+    }, 5.3);
+
+    // Roadmap strip lands with a subtle halo pulse — delight moment.
+    tl.to('#b2-halo', { opacity: 0.65, scale: 1.3, duration: 0.4, ease: 'power2.out' }, 7.0);
+    tl.to('#b2-halo', { opacity: 0, scale: 1.8, duration: 0.6, ease: 'power2.in' }, 7.35);
+    tl.fromTo('#b2-roadmap',
+      { opacity: 0, y: 16 },
+      { opacity: 1, y: 0, duration: 0.7, ease: 'back.out(1.4)' },
+      7.05);
+
     tl.to('#b2', { opacity: 0, filter: 'blur(6px)', duration: 0.5, ease: 'power2.in' }, 9.5);
 
     // ==============================================================
