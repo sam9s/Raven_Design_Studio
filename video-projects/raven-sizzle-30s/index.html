@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en" data-theme="graphite-dark">
+<head>
+  <meta charset="utf-8" />
+  <title>Raven — untitled composition</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../brand/brand-tokens.css" />
+  <style>
+    html, body { width: 1920px; height: 1080px; overflow: hidden; }
+    .stage {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      display: grid;
+      place-items: center;
+    }
+    .wordmark {
+      font-family: var(--font-brand);
+      font-size: 5rem;
+      letter-spacing: 0.06em;
+      color: var(--text-primary);
+      opacity: 0;
+      transform: translateY(22px);
+      filter: blur(4px);
+    }
+    .eyebrow {
+      position: absolute;
+      top: 8%;
+      left: 6%;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-size: 0.95rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
+    .eyebrow__rule {
+      display: block;
+      width: 0;
+      height: 1.5px;
+      background: var(--accent);
+    }
+  </style>
+</head>
+<body data-composition-id="main">
+  <div class="stage">
+    <div class="eyebrow">
+      <span class="eyebrow__rule"></span>
+      <span class="eyebrow__label">Raven Design Studio</span>
+    </div>
+    <div class="wordmark">Raven Solutions</div>
+  </div>
+
+  <script type="module">
+    // Placeholder timeline — swap in real GSAP timeline when wiring up composition.
+    window.__timelines = window.__timelines || {};
+    window.__timelines.main = {
+      duration: 30,
+      seek: () => { /* replace with real seek */ }
+    };
+  </script>
+</body>
+</html>
