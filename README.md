@@ -2,7 +2,8 @@
 
 Internal AI-video-editing studio for **Raven Solutions**. Produces advertisement videos, shots, YouTube explainers, and short-form content — driven by Claude Code on top of HeyGen Hyperframes.
 
-Owner: Samret "Sammy" Singh. Not for client delivery.
+- Repository: https://github.com/sam9s/Raven_Design_Studio
+- Owner: Samret "Sammy" Singh. Not for client delivery.
 
 ## Quick start
 
