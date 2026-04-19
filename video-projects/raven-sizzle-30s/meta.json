@@ -1,12 +1,11 @@
 {
   "id": "raven-sizzle-30s",
   "name": "Raven Solutions — 30s Sizzle",
-  "theme": "graphite-dark",
-  "dimensions": { "width": 1920, "height": 1080 },
+  "createdAt": "2026-04-19T00:00:00.000Z",
+  "width": 1920,
+  "height": 1080,
   "fps": 30,
-  "durationSeconds": 30,
-  "orientation": "landscape",
+  "theme": "graphite-dark",
   "tags": ["raven-solutions", "sizzle", "brand", "silent-with-music"],
-  "status": "storyboard-draft",
-  "createdAt": "2026-04-19"
+  "status": "v1-silent"
 }
