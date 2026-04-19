@@ -942,14 +942,14 @@
   <div id="root"
        data-composition-id="raven-sizzle-30s"
        data-start="0"
-       data-duration="30"
+       data-duration="32"
        data-width="1920"
        data-height="1080">
 
-    <!-- Music bed — pre-trimmed to 30s with 0.5s fade-in and 2s fade-out. -->
+    <!-- Music bed — pre-trimmed to 32s with 0.5s fade-in and 2s fade-out. -->
     <audio id="music"
            data-start="0"
-           data-duration="30"
+           data-duration="32"
            data-track-index="1"
            data-volume="0.65"
            src="assets/music.mp3"></audio>
@@ -1189,7 +1189,9 @@
     const tl = gsap.timeline({ paused: true });
 
     // ==============================================================
-    // BEAT 1 — Cold open terminal (0.0 – 3.0)
+    // BEAT 1 — Cold open terminal (0.0 – 5.0)
+    // Extended from 3s to 5s so the prompt + result line are readable
+    // before the beat exits.
     // ==============================================================
     tl.to('#b1', { opacity: 1, duration: 0.3, ease: 'power1.out' }, 0.0);
     tl.fromTo('#b1-cmd',
@@ -1200,21 +1202,22 @@
       { opacity: 0, y: 14, filter: 'blur(4px)' },
       { opacity: 1, y: 0, filter: 'blur(0px)', duration: 0.8, ease: OUT_EASE },
       1.80);
-    tl.to('#b1-cursor', { opacity: 0, duration: 0.25 }, 2.30);
-    tl.to('#b1', { opacity: 0, filter: 'blur(6px)', duration: 0.5, ease: 'power2.in' }, 2.60);
+    // Hold from 2.6s → 4.3s = 1.7s of absolute stillness for reading.
+    tl.to('#b1-cursor', { opacity: 0, duration: 0.25 }, 4.30);
+    tl.to('#b1', { opacity: 0, filter: 'blur(6px)', duration: 0.5, ease: 'power2.in' }, 4.50);
 
     // ==============================================================
-    // BEAT 2 — GREST IMS dashboard in browser frame (3.0 – 10.0)
+    // BEAT 2 — GREST IMS dashboard in browser frame (5.0 – 12.0)
     // ==============================================================
-    tl.set('#b2', { opacity: 1 }, 3.0);
+    tl.set('#b2', { opacity: 1 }, 5.0);
     tl.fromTo('.b2-eyebrow-strip',
       { opacity: 0, y: 18, filter: 'blur(4px)' },
       { opacity: 1, y: 0, filter: 'blur(0px)', duration: 0.9, ease: OUT_EASE },
-      3.0);
+      5.0);
     tl.fromTo('.b2-browser',
       { opacity: 0, y: 40, scale: 0.96, filter: 'blur(6px)' },
       { opacity: 1, y: 0, scale: 1, filter: 'blur(0px)', duration: 1.0, ease: OUT_EASE, transformOrigin: 'center center' },
-      3.25);
+      5.25);
 
     // Four metric count-ups, staggered
     const m1 = { val: 0 };
@@ -1225,7 +1228,7 @@
       onUpdate: function () {
         document.getElementById('b2-m1').textContent = Math.round(m1.val).toLocaleString();
       }
-    }, 4.4);
+    }, 6.4);
 
     const m2 = { val: 0 };
     tl.to(m2, {
@@ -1235,7 +1238,7 @@
       onUpdate: function () {
         document.getElementById('b2-m2').textContent = Math.round(m2.val).toLocaleString();
       }
-    }, 4.7);
+    }, 6.7);
 
     const m3 = { val: 0 };
     tl.to(m3, {
@@ -1245,7 +1248,7 @@
       onUpdate: function () {
         document.getElementById('b2-m3').textContent = '₹' + Math.round(m3.val).toLocaleString('en-IN');
       }
-    }, 5.0);
+    }, 7.0);
 
     const m4 = { val: 0 };
     tl.to(m4, {
@@ -1255,32 +1258,32 @@
       onUpdate: function () {
         document.getElementById('b2-m4').textContent = Math.round(m4.val).toLocaleString();
       }
-    }, 5.3);
+    }, 7.3);
 
     // Roadmap strip lands with a subtle halo pulse — delight moment.
-    tl.to('#b2-halo', { opacity: 0.65, scale: 1.3, duration: 0.4, ease: 'power2.out' }, 7.0);
-    tl.to('#b2-halo', { opacity: 0, scale: 1.8, duration: 0.6, ease: 'power2.in' }, 7.35);
+    tl.to('#b2-halo', { opacity: 0.65, scale: 1.3, duration: 0.4, ease: 'power2.out' }, 9.0);
+    tl.to('#b2-halo', { opacity: 0, scale: 1.8, duration: 0.6, ease: 'power2.in' }, 9.35);
     tl.fromTo('#b2-roadmap',
       { opacity: 0, y: 16 },
       { opacity: 1, y: 0, duration: 0.7, ease: 'back.out(1.4)' },
-      7.05);
+      9.05);
 
-    tl.to('#b2', { opacity: 0, filter: 'blur(6px)', duration: 0.5, ease: 'power2.in' }, 9.5);
+    tl.to('#b2', { opacity: 0, filter: 'blur(6px)', duration: 0.5, ease: 'power2.in' }, 11.5);
 
     // ==============================================================
-    // BEAT 3 — Wayveda reconciliation (10.0 – 17.0)
+    // BEAT 3 — Wayveda reconciliation (12.0 – 19.0)
     // Browser window entrance + number tickers + delight halo
     // ==============================================================
-    tl.set('#b3', { opacity: 1 }, 10.0);
+    tl.set('#b3', { opacity: 1 }, 12.0);
     tl.fromTo('.b3-eyebrow-strip',
       { opacity: 0, y: 18, filter: 'blur(4px)' },
       { opacity: 1, y: 0, filter: 'blur(0px)', duration: 0.9, ease: OUT_EASE },
-      10.0);
+      12.0);
     // Browser window comes in with a scale-from-below feel
     tl.fromTo('.b3-browser',
       { opacity: 0, y: 40, scale: 0.96, filter: 'blur(6px)' },
       { opacity: 1, y: 0, scale: 1, filter: 'blur(0px)', duration: 1.0, ease: OUT_EASE, transformOrigin: 'center center' },
-      10.2);
+      12.2);
 
     const shopCounter = { val: 0 };
     tl.to(shopCounter, {
@@ -1290,9 +1293,9 @@
       onUpdate: function () {
         document.getElementById('b3-shopify').textContent = Math.round(shopCounter.val).toLocaleString();
       }
-    }, 11.3);
+    }, 13.3);
 
-    tl.to('#b3-arrow', { opacity: 1, duration: 0.5 }, 12.5);
+    tl.to('#b3-arrow', { opacity: 1, duration: 0.5 }, 14.5);
 
     const shipCounter = { val: 0 };
     tl.to(shipCounter, {
@@ -1302,31 +1305,31 @@
       onUpdate: function () {
         document.getElementById('b3-shiprocket').textContent = Math.round(shipCounter.val).toLocaleString();
       }
-    }, 13.0);
+    }, 15.0);
 
     tl.fromTo('#b3-table',
       { opacity: 0, y: 10 },
       { opacity: 1, y: 0, duration: 0.6, ease: OUT_EASE },
-      14.0);
+      16.0);
 
     // Delight halo — expands, decays behind the reconciled stamp.
-    tl.to('#b3-halo', { opacity: 0.85, scale: 1.3, duration: 0.35, ease: 'power2.out' }, 14.55);
-    tl.to('#b3-halo', { opacity: 0, scale: 1.7, duration: 0.55, ease: 'power2.in' }, 14.90);
+    tl.to('#b3-halo', { opacity: 0.85, scale: 1.3, duration: 0.35, ease: 'power2.out' }, 16.55);
+    tl.to('#b3-halo', { opacity: 0, scale: 1.7, duration: 0.55, ease: 'power2.in' }, 16.90);
     tl.fromTo('#b3-reconciled',
       { opacity: 0, scale: 0.85, y: 8 },
       { opacity: 1, scale: 1, y: 0, duration: 0.45, ease: 'back.out(1.5)' },
-      14.60);
+      16.60);
 
-    tl.to('#b3', { opacity: 0, filter: 'blur(6px)', duration: 0.5, ease: 'power2.in' }, 16.5);
+    tl.to('#b3', { opacity: 0, filter: 'blur(6px)', duration: 0.5, ease: 'power2.in' }, 18.5);
 
     // ==============================================================
-    // BEAT 4 — Nature Mania (17.0 – 24.0, WARM-EDITORIAL theme)
+    // BEAT 4 — Nature Mania (19.0 – 26.0, WARM-EDITORIAL theme)
     // ==============================================================
-    tl.set('#b4', { opacity: 1 }, 17.0);
+    tl.set('#b4', { opacity: 1 }, 19.0);
     tl.fromTo('.b4-header__left',
       { opacity: 0, y: 22, filter: 'blur(4px)' },
       { opacity: 1, y: 0, filter: 'blur(0px)', duration: 1.0, ease: OUT_EASE },
-      17.0);
+      19.0);
 
     const natCounter = { val: 0 };
     tl.to(natCounter, {
@@ -1336,15 +1339,15 @@
       onUpdate: function () {
         document.getElementById('b4-stat').textContent = Math.round(natCounter.val) + '+';
       }
-    }, 17.3);
+    }, 19.3);
     tl.fromTo('.b4-header__right',
       { opacity: 0 },
       { opacity: 1, duration: 0.6, ease: OUT_EASE },
-      17.3);
+      19.3);
 
     const barTargets = [42, 28, 18, 12];
     barTargets.forEach(function (pct, i) {
-      const t = 18.6 + i * 0.45;
+      const t = 20.6 + i * 0.45;
       tl.to('.b4-bar-row[data-idx="' + (i + 1) + '"] .b4-bar-row__name',
         { opacity: 1, duration: 0.4, ease: OUT_EASE }, t);
       tl.fromTo('.b4-bar-row[data-idx="' + (i + 1) + '"] .b4-bar-row__fill',
@@ -1354,20 +1357,20 @@
         { opacity: 1, duration: 0.3, ease: OUT_EASE }, t + 0.6);
     });
 
-    tl.to('#b4', { opacity: 0, filter: 'blur(6px)', duration: 0.5, ease: 'power2.in' }, 23.5);
+    tl.to('#b4', { opacity: 0, filter: 'blur(6px)', duration: 0.5, ease: 'power2.in' }, 25.5);
 
     // ==============================================================
-    // BEAT 5 — Outro (24.0 – 30.0)
+    // BEAT 5 — Outro (26.0 – 32.0)
     // ==============================================================
-    tl.set('#b5', { opacity: 1 }, 24.0);
+    tl.set('#b5', { opacity: 1 }, 26.0);
     tl.fromTo('.b5-wordmark',
       { opacity: 0, y: 22, filter: 'blur(4px)' },
       { opacity: 1, y: 0, filter: 'blur(0px)', duration: 1.2, ease: OUT_EASE },
-      24.6);
-    tl.to('#b5-rule', { width: 420, duration: 0.9, ease: 'power2.out' }, 25.8);
-    tl.to('#b5-tagline', { opacity: 1, duration: 0.7, ease: OUT_EASE }, 26.3);
+      26.6);
+    tl.to('#b5-rule', { width: 420, duration: 0.9, ease: 'power2.out' }, 27.8);
+    tl.to('#b5-tagline', { opacity: 1, duration: 0.7, ease: OUT_EASE }, 28.3);
 
-    tl.to({}, { duration: 30 }, 0);
+    tl.to({}, { duration: 32 }, 0);
 
     window.__timelines = window.__timelines || {};
     window.__timelines['raven-sizzle-30s'] = tl;

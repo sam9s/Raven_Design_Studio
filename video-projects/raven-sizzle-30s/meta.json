@@ -5,7 +5,8 @@
   "width": 1920,
   "height": 1080,
   "fps": 30,
+  "durationSeconds": 32,
   "theme": "graphite-dark",
-  "tags": ["raven-solutions", "sizzle", "brand", "silent-with-music"],
-  "status": "v1-silent"
+  "tags": ["raven-solutions", "sizzle", "brand"],
+  "status": "v6"
 }
